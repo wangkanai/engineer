@@ -8,6 +8,13 @@
 *.userosscache
 *.sln.docstates
 
+# AI assistant
+.vercel/
+.vercel.json
+.kilocode/
+repomix-output.xml
+repomix-output.json
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
