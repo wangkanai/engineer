@@ -6,15 +6,15 @@
   "output": {
     "filePath": "repomix-output.xml",
     "style": "xml",
-    "parsableStyle": false,
+    "parsableStyle": true,
     "fileSummary": true,
     "directoryStructure": true,
     "files": true,
     "removeComments": false,
     "removeEmptyLines": false,
     "compress": false,
-    "topFilesLength": 5,
-    "showLineNumbers": false,
+    "topFilesLength": 20,
+    "showLineNumbers": true,
     "truncateBase64": false,
     "copyToClipboard": false,
     "git": {
@@ -23,11 +23,53 @@
       "includeDiffs": false
     }
   },
-  "include": [],
+  "include": [
+    "**/*.cs",
+    "**/*.csproj",
+    "**/*.sln",
+    "**/*.json",
+    "**/*.xml",
+    "**/*.config",
+    "**/*.props",
+    "**/*.targets",
+    "**/*.md",
+    "**/*.yml",
+    "**/*.yaml",
+    "**/Dockerfile",
+    "**/.dockerignore",
+    "**/*.cshtml",
+    "**/*.razor",
+    "**/appsettings.json",
+    "**/appsettings.Development.json"
+  ],
   "ignore": {
     "useGitignore": true,
     "useDefaultPatterns": true,
-    "customPatterns": []
+    "customPatterns": [
+      "**/bin/**",
+      "**/obj/**",
+      "**/packages/**",
+      "**/.vs/**",
+      "**/.idea/**",
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/out/**",
+      "**/publish/**",
+      "**/TestResults/**",
+      "**/coverage/**",
+      "**/*.user",
+      "**/*.suo",
+      "**/*.cache",
+      "**/*.log",
+      "**/*.tmp",
+      "**/*.temp",
+      "**/repomix-output.*",
+      "**/.sonarqube/**",
+      "**/artifacts/**",
+      "**/_ReSharper*/**",
+      "**/*.DotSettings.user"
+    ]
   },
   "security": {
     "enableSecurityCheck": true
