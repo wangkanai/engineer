@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineer IDE - Complete UI/UX Component Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .wireframe-container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .wireframe-container h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+
+        .wireframe-embed {
+            width: 100%;
+            max-width: 1440px;
+            height: auto;
+            border: 2px solid #ecf0f1;
+            border-radius: 12px;
+            background: #1e1e1e;
+        }
+
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+
+        .section h3 {
+            color: #34495e;
+            font-size: 1.4rem;
+            margin: 30px 0 15px 0;
+            position: relative;
+        }
+
+        .section h3::before {
+            content: "▶";
+            color: #3498db;
+            margin-right: 10px;
+            font-size: 0.8em;
+        }
+
+        .component-highlight {
+            background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .interaction-flow {
+            background: #f8f9fa;
+            border: 2px dashed #3498db;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .interaction-flow h4 {
+            color: #2980b9;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .design-principle {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .design-principle h4 {
+            color: #c0392b;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .workflow-step {
+            background: #fff;
+            border: 2px solid #ecf0f1;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .workflow-step:hover {
+            border-color: #3498db;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .component-card {
+            background: #f8f9fa;
+            border: 2px solid #ecf0f1;
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .component-card:hover {
+            border-color: #3498db;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.15);
+        }
+
+        .component-card h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .measurement {
+            background: #e8f5e8;
+            border: 1px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Consolas', monospace;
+            font-size: 13px;
+            margin: 15px 0;
+        }
+
+        .cognitive-insight {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-left: 5px solid #f39c12;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .cognitive-insight h4 {
+            color: #d68910;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .tech-spec {
+            background: #f4f4f4;
+            border: 1px solid #bdc3c7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .color-palette {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .color-item {
+            flex: 1;
+            min-width: 120px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+            font-family: monospace;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .ai-conversation {
+            background: #1e1e1e;
+            color: #cccccc;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ai-message {
+            background: #252526;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 3px solid #569cd6;
+        }
+
+        .user-message {
+            background: #252526;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 3px solid #4ec9b0;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            border: 2px solid #ecf0f1;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .toc h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .toc li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .toc a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Engineer IDE - Complete UI/UX Component Guide</h1>
+            <p>Understanding how every component supports the revolutionary context engineering workflow</p>
+        </div>
+
+        <!-- Wireframe Display -->
+        <div class="wireframe-container">
+            <h2>Complete Interface Wireframe</h2>
+            <svg class="wireframe-embed" width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Main Canvas Background -->
+              <rect width="1440" height="900" fill="#1e1e1e"/>
+              
+              <!-- Top Navigation Bar (1440 x 40px) -->
+              <g id="top-navigation">
+                <rect width="1440" height="40" fill="#2d2d30"/>
+                <line x1="0" y1="40" x2="1440" y2="40" stroke="#3e3e42" stroke-width="1"/>
+                
+                <!-- Logo -->
+                <text x="15" y="26" fill="#888888" font-family="Inter" font-size="14" font-weight="600">⚡ Engineer IDE</text>
+                
+                <!-- Navigation Menu -->
+                <text x="140" y="26" fill="#888888" font-family="Inter" font-size="13">File</text>
+                <text x="170" y="26" fill="#888888" font-family="Inter" font-size="13">Edit</text>
+                <text x="200" y="26" fill="#888888" font-family="Inter" font-size="13">View</text>
+                <text x="235" y="26" fill="#888888" font-family="Inter" font-size="13">Context</text>
+                <text x="285" y="26" fill="#888888" font-family="Inter" font-size="13">AI</text>
+                <text x="305" y="26" fill="#888888" font-family="Inter" font-size="13">Tools</text>
+                <text x="345" y="26" fill="#888888" font-family="Inter" font-size="13">Help</text>
+                
+                <!-- Project Status -->
+                <text x="1200" y="26" fill="#888888" font-family="Inter" font-size="12">Project: Customer Management API</text>
+                <circle cx="1410" cy="20" r="4" fill="#4ec9b0"/>
+              </g>
+              
+              <!-- Left Sidebar (60 x 660px, spans from top nav to bottom) -->
+              <g id="left-sidebar">
+                <rect x="0" y="40" width="60" height="660" fill="#252526"/>
+                <line x1="60" y1="40" x2="60" y2="700" stroke="#3e3e42" stroke-width="1"/>
+                
+                <!-- Left Sidebar Icons (40x40px with 8px spacing) -->
+                <g id="left-sidebar-icons">
+                  <!-- File Explorer -->
+                  <rect x="10" y="50" width="40" height="40" rx="4" fill="#3c3c3c" stroke="#464647" stroke-width="1"/>
+                  <text x="30" y="75" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">📁</text>
+                  
+                  <!-- Git Repository -->
+                  <rect x="10" y="98" width="40" height="40" rx="4" fill="#3c3c3c" stroke="#464647" stroke-width="1"/>
+                  <text x="30" y="123" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">🔗</text>
+                  
+                  <!-- Context Manager -->
+                  <rect x="10" y="146" width="40" height="40" rx="4" fill="#3c3c3c" stroke="#464647" stroke-width="1"/>
+                  <text x="30" y="171" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">🎯</text>
+                  
+                  <!-- Extensions -->
+                  <rect x="10" y="194" width="40" height="40" rx="4" fill="#3c3c3c" stroke="#464647" stroke-width="1"/>
+                  <text x="30" y="219" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">🧩</text>
+                  
+                  <!-- Settings -->
+                  <rect x="10" y="242" width="40" height="40" rx="4" fill="#3c3c3c" stroke="#464647" stroke-width="1"/>
+                  <text x="30" y="267" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">⚙️</text>
+                </g>
+              </g>
+              
+              <!-- Right Sidebar (60 x 660px, spans from top nav to bottom) -->
+              <g id="right-sidebar">
+                <rect x="1380" y="40" width="60" height="660" fill="#252526"/>
+                <line x1="1380" y1="40" x2="1380" y2="700" stroke="#3e3e42" stroke-width="1"/>
+                
+                <!-- Right Sidebar Icons (AI Tools) -->
+                <g id="right-sidebar-icons">
+                  <!-- AI Chat -->
+                  <rect x="1390" y="50" width="40" height="40" rx="4" fill="#3c3c3c" stroke="#464647" stroke-width="1"/>
+                  <text x="1410" y="75" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">🤖</text>
+                  
+                  <!-- Documentation Assistant -->
+                  <rect x="1390" y="98" width="40" height="40" rx="4" fill="#3c3c3c" stroke="#464647" stroke-width="1"/>
+                  <text x="1410" y="123" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">📚</text>
+                  
+                  <!-- Code Analysis -->
+                  <rect x="1390" y="146" width="40" height="40" rx="4" fill="#3c3c3c" stroke="#464647" stroke-width="1"/>
+                  <text x="1410" y="171" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">🔍</text>
+                  
+                  <!-- AI Models -->
+                  <rect x="1390" y="194" width="40" height="40" rx="4" fill="#3c3c3c" stroke="#464647" stroke-width="1"/>
+                  <text x="1410" y="219" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">🧠</text>
+                  
+                  <!-- Workflow -->
+                  <rect x="1390" y="242" width="40" height="40" rx="4" fill="#3c3c3c" stroke="#464647" stroke-width="1"/>
+                  <text x="1410" y="267" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">🔄</text>
+                </g>
+              </g>
+              
+              <!-- Main Content Area (1320 x 460px, positioned between sidebars) -->
+              <g id="main-content">
+                <rect x="60" y="40" width="1320" height="460" fill="#1e1e1e"/>
+                
+                <!-- Content Tabs (35px height) -->
+                <g id="content-tabs">
+                  <rect x="60" y="40" width="1320" height="35" fill="#2d2d30"/>
+                  <line x1="60" y1="75" x2="1380" y2="75" stroke="#3e3e42" stroke-width="1"/>
+                  
+                  <!-- Context Tab (Active) -->
+                  <rect x="75" y="48" width="70" height="27" rx="3" fill="#1e1e1e"/>
+                  <text x="110" y="64" fill="#cccccc" font-family="Inter" font-size="13" text-anchor="middle">Context</text>
+                  
+                  <!-- Other Tabs -->
+                  <text x="170" y="64" fill="#888888" font-family="Inter" font-size="13">Editor</text>
+                  <text x="220" y="64" fill="#888888" font-family="Inter" font-size="13">Preview</text>
+                  <text x="275" y="64" fill="#888888" font-family="Inter" font-size="13">Docs</text>
+                </g>
+                
+                <!-- Workspace Container -->
+                <g id="workspace-container">
+                  <rect x="80" y="95" width="1280" height="385" rx="6" fill="#252526" stroke="#3e3e42" stroke-width="1"/>
+                  
+                  <!-- Workspace Header -->
+                  <text x="100" y="120" fill="#cccccc" font-family="Inter" font-size="16" font-weight="600">Customer Management API - Context Definition</text>
+                  <line x1="100" y1="130" x2="1340" y2="130" stroke="#3e3e42" stroke-width="1"/>
+                  
+                  <!-- Action Buttons -->
+                  <rect x="1150" y="100" width="80" height="24" rx="3" fill="#0e639c"/>
+                  <text x="1190" y="115" fill="#ffffff" font-family="Inter" font-size="12" text-anchor="middle">💡 AI Suggest</text>
+                  
+                  <rect x="1240" y="100" width="60" height="24" rx="3" fill="#0e639c"/>
+                  <text x="1270" y="115" fill="#ffffff" font-family="Inter" font-size="12" text-anchor="middle">✅ Validate</text>
+                  
+                  <rect x="1310" y="100" width="60" height="24" rx="3" fill="#0e639c"/>
+                  <text x="1340" y="115" fill="#ffffff" font-family="Inter" font-size="12" text-anchor="middle">🚀 Generate</text>
+                  
+                  <!-- Context Form Fields -->
+                  <g id="context-form">
+                    <!-- Project Purpose -->
+                    <text x="100" y="155" fill="#cccccc" font-family="Inter" font-size="13" font-weight="500">Project Purpose</text>
+                    <rect x="100" y="162" width="1240" height="80" rx="3" fill="#1e1e1e" stroke="#3e3e42" stroke-width="1"/>
+                    <text x="108" y="182" fill="#888888" font-family="Inter" font-size="13">Build a RESTful API for customer management with CRUD operations, email validation, and audit logging.</text>
+                    <text x="108" y="200" fill="#888888" font-family="Inter" font-size="13">Focus on scalability and maintainability for enterprise use.</text>
+                    
+                    <!-- Key Requirements -->
+                    <text x="100" y="265" fill="#cccccc" font-family="Inter" font-size="13" font-weight="500">Key Requirements</text>
+                    <rect x="100" y="272" width="1240" height="100" rx="3" fill="#1e1e1e" stroke="#3e3e42" stroke-width="1"/>
+                    <text x="108" y="292" fill="#888888" font-family="Inter" font-size="13">• Customer CRUD operations (Create, Read, Update, Delete)</text>
+                    <text x="108" y="310" fill="#888888" font-family="Inter" font-size="13">• Email address validation and uniqueness constraints</text>
+                    <text x="108" y="328" fill="#888888" font-family="Inter" font-size="13">• Comprehensive audit trail for all customer changes</text>
+                    <text x="108" y="346" fill="#888888" font-family="Inter" font-size="13">• RESTful API design with proper HTTP status codes and error handling</text>
+                    <text x="108" y="364" fill="#888888" font-family="Inter" font-size="13">• Data pagination for efficient list operations</text>
+                    
+                    <!-- Technical Constraints -->
+                    <text x="100" y="395" fill="#cccccc" font-family="Inter" font-size="13" font-weight="500">Technical Constraints</text>
+                    <rect x="100" y="402" width="1240" height="60" rx="3" fill="#1e1e1e" stroke="#3e3e42" stroke-width="1"/>
+                    <text x="108" y="422" fill="#888888" font-family="Inter" font-size="13">• ASP.NET Core 8.0 with Entity Framework Core and SQL Server</text>
+                    <text x="108" y="440" fill="#888888" font-family="Inter" font-size="13">• JWT authentication, support for 1000+ concurrent users, sub-200ms response times</text>
+                    <text x="108" y="458" fill="#888888" font-family="Inter" font-size="13">• OpenAPI/Swagger documentation, comprehensive unit test coverage</text>
+                  </g>
+                </g>
+              </g>
+              
+              <!-- Bottom Panel (1320 x 200px, spans only between sidebars) -->
+              <g id="bottom-panel">
+                <rect x="60" y="700" width="1320" height="200" fill="#252526"/>
+                <line x1="60" y1="700" x2="1380" y2="700" stroke="#3e3e42" stroke-width="1"/>
+                
+                <!-- Panel Tabs (30px height) -->
+                <g id="panel-tabs">
+                  <rect x="60" y="700" width="1320" height="30" fill="#2d2d30"/>
+                  <line x1="60" y1="730" x2="1380" y2="730" stroke="#3e3e42" stroke-width="1"/>
+                  
+                  <!-- Terminal Tab (Active) -->
+                  <rect x="75" y="704" width="60" height="22" rx="3" fill="#1e1e1e"/>
+                  <text x="105" y="717" fill="#cccccc" font-family="Inter" font-size="12" text-anchor="middle">Terminal</text>
+                  
+                  <!-- Other Tabs -->
+                  <text x="155" y="717" fill="#888888" font-family="Inter" font-size="12">Output</text>
+                  <text x="200" y="717" fill="#888888" font-family="Inter" font-size="12">Problems</text>
+                  <text x="260" y="717" fill="#888888" font-family="Inter" font-size="12">AI Logs</text>
+                  <text x="315" y="717" fill="#888888" font-family="Inter" font-size="12">Debug Console</text>
+                </g>
+                
+                <!-- Panel Content Area -->
+                <g id="panel-content">
+                  <text x="75" y="750" fill="#888888" font-family="Consolas" font-size="12">$ dotnet restore</text>
+                  <text x="75" y="768" fill="#4ec9b0" font-family="Consolas" font-size="12">  Restored 42 packages in 2.3s</text>
+                  <text x="75" y="786" fill="#888888" font-family="Consolas" font-size="12">$ dotnet build</text>
+                  <text x="75" y="804" fill="#4ec9b0" font-family="Consolas" font-size="12">Build succeeded.</text>
+                  <text x="75" y="822" fill="#569cd6" font-family="Consolas" font-size="12">AI Agent: Context analysis complete. CustomerController generated with validation.</text>
+                  <text x="75" y="840" fill="#dcdcaa" font-family="Consolas" font-size="12">Context Engine: Architecture validation passed. Ready for implementation review.</text>
+                  <text x="75" y="858" fill="#888888" font-family="Consolas" font-size="12">$ ai generate --component=CustomerService --validate=true</text>
+                  <text x="75" y="876" fill="#888888" font-family="Consolas" font-size="12">$ _</text>
+                </g>
+              </g>
+              
+              <!-- File Explorer Offcanvas Panel (300px wide, positioned next to left sidebar) -->
+              <g id="file-explorer-offcanvas" opacity="0.95">
+                <rect x="60" y="40" width="300" height="460" fill="#252526" stroke="#3e3e42" stroke-width="1"/>
+                <filter id="panelShadow">
+                  <feDropShadow dx="4" dy="0" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
+                </filter>
+                <rect x="60" y="40" width="300" height="460" fill="#252526" stroke="#3e3e42" stroke-width="1" filter="url(#panelShadow)"/>
+                
+                <!-- Panel Header -->
+                <rect x="60" y="40" width="300" height="40" fill="#2d2d30"/>
+                <line x1="60" y1="80" x2="360" y2="80" stroke="#3e3e42" stroke-width="1"/>
+                <text x="75" y="63" fill="#cccccc" font-family="Inter" font-size="14" font-weight="600">File Explorer</text>
+                <text x="335" y="63" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">×</text>
+                
+                <!-- File Tree Content -->
+                <g id="file-tree">
+                  <text x="75" y="105" fill="#888888" font-family="Inter" font-size="13">📁 CustomerApi.sln</text>
+                  <text x="75" y="125" fill="#888888" font-family="Inter" font-size="13">📁 src/</text>
+                  <text x="95" y="145" fill="#888888" font-family="Inter" font-size="13">📁 CustomerApi.Core/</text>
+                  <text x="115" y="165" fill="#888888" font-family="Inter" font-size="13">📄 Customer.cs</text>
+                  <text x="115" y="185" fill="#888888" font-family="Inter" font-size="13">📄 ICustomerRepository.cs</text>
+                  <text x="95" y="205" fill="#888888" font-family="Inter" font-size="13">📁 CustomerApi.Web/</text>
+                  <text x="115" y="225" fill="#888888" font-family="Inter" font-size="13">📁 Controllers/</text>
+                  <text x="135" y="245" fill="#888888" font-family="Inter" font-size="13">📄 CustomerController.cs</text>
+                  <text x="115" y="265" fill="#888888" font-family="Inter" font-size="13">📁 Services/</text>
+                  <text x="135" y="285" fill="#888888" font-family="Inter" font-size="13">📄 CustomerService.cs</text>
+                  <text x="95" y="305" fill="#888888" font-family="Inter" font-size="13">📁 CustomerApi.Tests/</text>
+                  <text x="115" y="325" fill="#888888" font-family="Inter" font-size="13">📄 CustomerControllerTests.cs</text>
+                  <text x="75" y="345" fill="#888888" font-family="Inter" font-size="13">📁 docs/</text>
+                  <text x="95" y="365" fill="#888888" font-family="Inter" font-size="13">📄 context-definition.md</text>
+                  <text x="95" y="385" fill="#888888" font-family="Inter" font-size="13">📄 api-specification.yml</text>
+                  <text x="95" y="405" fill="#888888" font-family="Inter" font-size="13">📄 architecture-decisions.md</text>
+                </g>
+              </g>
+              
+              <!-- AI Chat Offcanvas Panel (300px wide, positioned next to right sidebar) -->
+              <g id="ai-chat-offcanvas" opacity="0.95">
+                <rect x="1080" y="40" width="300" height="460" fill="#252526" stroke="#3e3e42" stroke-width="1" filter="url(#panelShadow)"/>
+                
+                <!-- Panel Header -->
+                <rect x="1080" y="40" width="300" height="40" fill="#2d2d30"/>
+                <line x1="1080" y1="80" x2="1380" y2="80" stroke="#3e3e42" stroke-width="1"/>
+                <text x="1095" y="63" fill="#cccccc" font-family="Inter" font-size="14" font-weight="600">AI Assistant</text>
+                <text x="1355" y="63" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">×</text>
+                
+                <!-- Chat Messages -->
+                <g id="chat-messages">
+                  <!-- AI Message 1 -->
+                  <rect x="1095" y="95" width="270" height="65" rx="4" fill="#1e1e1e"/>
+                  <text x="1103" y="113" fill="#569cd6" font-family="Inter" font-size="13" font-weight="500">AI:</text>
+                  <text x="1103" y="130" fill="#888888" font-family="Inter" font-size="12">I've analyzed your context and generated the CustomerController with</text>
+                  <text x="1103" y="145" fill="#888888" font-family="Inter" font-size="12">comprehensive validation, audit logging, and proper error handling.</text>
+                  
+                  <!-- User Message -->
+                  <rect x="1095" y="170" width="270" height="40" rx="4" fill="#1e1e1e"/>
+                  <text x="1103" y="188" fill="#cccccc" font-family="Inter" font-size="13" font-weight="500">You:</text>
+                  <text x="1103" y="205" fill="#888888" font-family="Inter" font-size="12">Great! Can you add optimistic concurrency control for updates?</text>
+                  
+                  <!-- AI Message 2 -->
+                  <rect x="1095" y="220" width="270" height="85" rx="4" fill="#1e1e1e"/>
+                  <text x="1103" y="238" fill="#569cd6" font-family="Inter" font-size="13" font-weight="500">AI:</text>
+                  <text x="1103" y="255" fill="#888888" font-family="Inter" font-size="12">Excellent suggestion! I've added optimistic concurrency control:</text>
+                  <text x="1103" y="270" fill="#888888" font-family="Inter" font-size="12">• RowVersion property to Customer entity</text>
+                  <text x="1103" y="285" fill="#888888" font-family="Inter" font-size="12">• Concurrency exception handling in controller</text>
+                  <text x="1103" y="300" fill="#888888" font-family="Inter" font-size="12">• Proper 409 Conflict responses for concurrent updates</text>
+                  
+                  <!-- User Typing Indicator -->
+                  <rect x="1095" y="315" width="270" height="25" rx="4" fill="#1e1e1e"/>
+                  <text x="1103" y="330" fill="#dcdcaa" font-family="Inter" font-size="12">You are typing...</text>
+                </g>
+                
+                <!-- Chat Input -->
+                <rect x="1095" y="450" width="270" height="30" rx="4" fill="#1e1e1e" stroke="#3e3e42" stroke-width="1"/>
+                <text x="1103" y="468" fill="#666666" font-family="Inter" font-size="12">Please generate unit tests for concurrency scenarios...</text>
+              </g>
+            </svg>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h3>Navigation Guide</h3>
+            <ul>
+                <li><a href="#philosophy">The Context Engineering Philosophy</a></li>
+                <li><a href="#layout">Overall Layout Architecture</a></li>
+                <li><a href="#navigation">Top Navigation System</a></li>
+                <li><a href="#left-sidebar">Left Sidebar - Traditional Development Tools</a></li>
+                <li><a href="#right-sidebar">Right Sidebar - AI Collaboration Tools</a></li>
+                <li><a href="#main-content">Main Content - Context Engineering Workspace</a></li>
+                <li><a href="#bottom-panel">Bottom Panel - System Feedback</a></li>
+                <li><a href="#offcanvas">Offcanvas Panel System</a></li>
+                <li><a href="#interactions">User Interaction Patterns</a></li>
+                <li><a href="#workflow">Complete Context Engineering Workflow</a></li>
+                <li><a href="#technical">Technical Implementation Notes</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content Sections -->
+        <div class="section" id="philosophy">
+            <h2>The Context Engineering Philosophy</h2>
+            
+            <div class="design-principle">
+                <h4>Paradigm Shift: From Code-Centric to Context-Centric</h4>
+                <p>Traditional IDEs are built around the assumption that developers spend most of their time writing code. Engineer IDE revolutionizes this by recognizing that the most valuable work happens at the conceptual level - defining what should be built, why it should be built that way, and how it should integrate with existing systems.</p>
+            </div>
+
+            <p>Engineer IDE represents a fundamental shift in how we think about software development environments. Rather than focusing on syntax highlighting and code completion, this interface prioritizes the cognitive processes that lead to better software architecture and design decisions.</p>
+
+            <div class="cognitive-insight">
+                <h4>Cognitive Load Management</h4>
+                <p>Every design decision in Engineer IDE serves to reduce cognitive overhead during complex thinking tasks. The muted color palette, generous whitespace, and predictable spatial organization all work together to create what researchers call "calm technology" - tools that support your thinking without competing for your attention.</p>
+            </div>
+
+            <p>The interface acknowledges that context engineering is fundamentally different from traditional programming. Instead of focusing on implementing solutions, context engineers spend their time understanding problems, evaluating trade-offs, and communicating strategic decisions to AI agents that handle the implementation details. This requires a completely different set of interface patterns and interaction models.</p>
+
+            <div class="component-highlight">
+                <p>Notice how the interface dedicates the largest visual space to context definition rather than code editing. This spatial prioritization reflects the reality that strategic thinking deserves the most attention and screen real estate in a context engineering workflow.</p>
+            </div>
+        </div>
+
+        <div class="section" id="layout">
+            <h2>Overall Layout Architecture</h2>
+
+            <div class="measurement">
+                Canvas Dimensions: 1440 × 900 pixels (standard laptop resolution)
+                Layout Grid: 8px baseline grid system
+                Component Spacing: Consistent 8px, 15px, 20px, 40px intervals
+            </div>
+
+            <p>The layout follows what interface designers call "spatial containment" principles. Rather than treating the screen as an infinite canvas, the design creates clear boundaries and relationships between different functional areas. This spatial organization helps context engineers maintain their mental model of the workspace even during complex, multi-step workflows.</p>
+
+            <div class="design-principle">
+                <h4>The Psychology of Spatial Relationships</h4>
+                <p>The layout creates three distinct zones that mirror how human attention works during complex cognitive tasks. The peripheral zones (sidebars) house tools that need to be accessible but shouldn't demand constant attention. The central zone receives primary focus, while the bottom zone provides passive feedback that can be monitored without disrupting concentration.</p>
+            </div>
+
+            <h3>Layout Zones and Their Functions</h3>
+
+            <div class="component-grid">
+                <div class="component-card">
+                    <h4>Left Peripheral Zone</h4>
+                    <p>Traditional development tools that context engineers interact with intermittently. Positioned on the left to follow established patterns from other development environments, reducing learning curve.</p>
+                </div>
+                <div class="component-card">
+                    <h4>Central Focus Zone</h4>
+                    <p>The primary workspace where context engineers define requirements, review AI implementations, and make strategic decisions. This zone gets the largest allocation of screen space.</p>
+                </div>
+                <div class="component-card">
+                    <h4>Right Peripheral Zone</h4>
+                    <p>AI collaboration tools that represent the new paradigm of context engineering. Positioned on the right to spatially separate AI interactions from traditional development activities.</p>
+                </div>
+                <div class="component-card">
+                    <h4>Bottom Feedback Zone</h4>
+                    <p>System status, build output, and AI logs that need to be monitored but don't require focused attention. Positioned at the bottom to follow established patterns for status information.</p>
+                </div>
+            </div>
+
+            <div class="interaction-flow">
+                <h4>Spatial Workflow Pattern</h4>
+                <p>The layout supports a natural left-to-right workflow: access project files (left) → define context (center) → collaborate with AI (right) → monitor progress (bottom). This spatial organization reduces cognitive overhead by creating predictable patterns for where different types of information and tools can be found.</p>
+            </div>
+        </div>
+
+        <div class="section" id="navigation">
+            <h2>Top Navigation System</h2>
+
+            <div class="measurement">
+                Dimensions: 1440px × 40px
+                Background: #2d2d30 (dark theme)
+                Typography: 13-14px Inter font, #888888 color
+                Positioning: Fixed at top, spans full width
+            </div>
+
+            <p>The top navigation serves as the global context and control center for the entire application. Unlike traditional IDEs that pack this area with numerous toolbars and buttons, Engineer IDE maintains a clean, focused approach that prioritizes orientation over feature access.</p>
+
+            <h3>Navigation Components and Their Purposes</h3>
+
+            <div class="component-highlight">
+                <p><strong>Application Identity (⚡ Engineer IDE):</strong> The lightning bolt emoji conveys the revolutionary, high-energy nature of context engineering, while the clean typography establishes professional credibility. Positioned at the far left following established interface conventions.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">1</div>
+                <h4>File Menu</h4>
+                <p>Handles project-level operations like creating new context definitions, importing existing projects, and managing context templates. Notice how "File" takes on a different meaning in context engineering - you're primarily working with context files rather than code files.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">2</div>
+                <h4>Context Menu</h4>
+                <p>The most innovative menu category, providing access to context validation tools, template management, requirement analysis features, and context sharing capabilities. This menu represents functionality that simply doesn't exist in traditional IDEs.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">3</div>
+                <h4>AI Menu</h4>
+                <p>Manages AI agent configurations, model selection, conversation history, and collaboration preferences. This menu allows context engineers to customize how they work with different AI providers and models based on project requirements.</p>
+            </div>
+
+            <div class="component-highlight">
+                <p><strong>Project Status Indicator:</strong> The green circle and project name ("Customer Management API") provide constant awareness of what you're working on. The color indicates project health - green for active/healthy, yellow for warnings, red for issues requiring attention.</p>
+            </div>
+
+            <div class="cognitive-insight">
+                <h4>Minimal Cognitive Interruption</h4>
+                <p>The navigation uses muted colors (#888888) specifically to avoid competing with the main workspace for attention. This follows research showing that high-contrast navigation elements can interrupt concentrated thinking by creating visual noise in your peripheral vision.</p>
+            </div>
+        </div>
+
+        <div class="section" id="left-sidebar">
+            <h2>Left Sidebar - Traditional Development Tools</h2>
+
+            <div class="measurement">
+                Dimensions: 60px × 660px
+                Background: #252526
+                Icon Size: 40px × 40px clickable areas
+                Spacing: 8px vertical gaps between icons
+                Positioning: Spans from top navigation to canvas bottom
+            </div>
+
+            <p>The left sidebar represents the bridge between traditional software development and context engineering. These tools handle the foundational aspects of project management that remain necessary even when AI handles most implementation tasks.</p>
+
+            <h3>Tool Categories and Their Evolution</h3>
+
+            <div class="component-grid">
+                <div class="component-card">
+                    <h4>📁 File Explorer</h4>
+                    <p>Evolved beyond simple file browsing to focus on project structure visualization and generated artifact management. Shows the relationship between context definitions and AI-generated implementations, helping context engineers understand the full scope of their project.</p>
+                </div>
+                <div class="component-card">
+                    <h4>🔗 Git Repository</h4>
+                    <p>Version control becomes more sophisticated in context engineering, tracking not just code changes but context evolution, AI conversation history, and decision rationale. The tool helps maintain auditability of the entire development process.</p>
+                </div>
+                <div class="component-card">
+                    <h4>🎯 Context Manager</h4>
+                    <p>A revolutionary tool that doesn't exist in traditional IDEs. Manages context templates, tracks context evolution over time, validates context completeness, and helps context engineers build reusable patterns for similar projects.</p>
+                </div>
+                <div class="component-card">
+                    <h4>🧩 Extensions</h4>
+                    <p>Enables integration with external tools and services. Context engineers might need specialized validators, industry-specific templates, or integrations with enterprise architecture tools that traditional developers don't require.</p>
+                </div>
+            </div>
+
+            <div class="interaction-flow">
+                <h4>Offcanvas Interaction Pattern</h4>
+                <p>Clicking any sidebar icon triggers a 300px wide offcanvas panel that slides out from the left. This provides detailed access to each tool without disrupting the main workspace. The panels animate smoothly (200ms ease-out) to provide clear visual feedback about the action taken.</p>
+            </div>
+
+            <div class="cognitive-insight">
+                <h4>Peripheral Vision Design</h4>
+                <p>The narrow 60px width ensures these tools remain in your peripheral vision without demanding active attention. The muted icon colors (#888888) and subtle backgrounds create what researchers call "calm presence" - the tools are available when needed but invisible when not in use.</p>
+            </div>
+
+            <h3>File Explorer Panel Deep Dive</h3>
+
+            <p>When you click the File Explorer icon, the offcanvas panel reveals a sophisticated project structure that reflects the context engineering approach. Notice how the file organization differs from traditional development projects:</p>
+
+            <div class="code-block">
+CustomerApi.sln                    // Solution file
+📁 src/
+  📁 CustomerApi.Core/             // Domain logic (AI generated)
+    📄 Customer.cs                 // Entity models
+    📄 ICustomerRepository.cs      // Interface contracts
+  📁 CustomerApi.Web/              // API layer (AI generated)
+    📁 Controllers/
+      📄 CustomerController.cs     // REST endpoints
+    📁 Services/
+      📄 CustomerService.cs        // Business logic
+📁 CustomerApi.Tests/              // Test suite (AI generated)
+📁 docs/                          // Context documentation
+  📄 context-definition.md         // Your context input
+  📄 api-specification.yml         // Generated API spec
+  📄 architecture-decisions.md     // AI reasoning log
+            </div>
+
+            <div class="component-highlight">
+                <p>The file structure shows how context engineering creates a clear separation between human-authored strategic documents (in the docs folder) and AI-generated implementation artifacts (in src and tests folders). This organization makes it easy to understand what came from human insight versus AI implementation.</p>
+            </div>
+        </div>
+
+        <div class="section" id="right-sidebar">
+            <h2>Right Sidebar - AI Collaboration Tools</h2>
+
+            <div class="measurement">
+                Dimensions: 60px × 660px (matches left sidebar)
+                Background: #252526
+                Purpose: AI collaboration and assistance tools
+                Innovation: Represents entirely new category of development tools
+            </div>
+
+            <p>The right sidebar represents the revolutionary aspect of Engineer IDE - a dedicated space for AI collaboration tools that simply don't exist in traditional development environments. This spatial separation helps context engineers mentally distinguish between conventional development tasks and AI collaboration activities.</p>
+
+            <h3>AI Tool Categories</h3>
+
+            <div class="component-grid">
+                <div class="component-card">
+                    <h4>🤖 AI Chat</h4>
+                    <p>The primary interface for conversing with AI agents. More sophisticated than simple chat - maintains context across conversations, understands project history, and provides specialized prompts for different types of context engineering tasks.</p>
+                </div>
+                <div class="component-card">
+                    <h4>📚 Documentation Assistant</h4>
+                    <p>AI-powered help for creating and maintaining documentation. Includes markdown syntax assistance, automatic generation from code, context-to-documentation translation, and maintenance of consistency across project documents.</p>
+                </div>
+                <div class="component-card">
+                    <h4>🔍 Code Analysis</h4>
+                    <p>Provides AI-powered analysis of generated code, architecture validation, quality metrics, security scanning, and suggestions for improvements. Helps context engineers understand and evaluate what AI agents have created.</p>
+                </div>
+                <div class="component-card">
+                    <h4>🧠 AI Models</h4>
+                    <p>Manages AI provider selection, model switching, performance monitoring, and capability matching. Different AI models excel at different tasks - this tool helps context engineers choose the right AI agent for each type of work.</p>
+                </div>
+            </div>
+
+            <div class="design-principle">
+                <h4>Spatial Psychology of AI Collaboration</h4>
+                <p>Positioning AI tools on the right creates a psychological association with "forward-thinking" and "future-oriented" activities. This spatial choice helps context engineers mentally frame AI collaboration as progressive and innovative, rather than as a replacement for existing skills.</p>
+            </div>
+
+            <h3>AI Chat Panel - The Heart of Collaboration</h3>
+
+            <p>The AI Chat panel deserves special attention because it represents the core innovation of context engineering. This isn't just a chatbot interface - it's a sophisticated collaboration environment designed for ongoing dialogue between human strategic thinking and AI implementation capabilities.</p>
+
+            <div class="ai-conversation">
+                <div class="ai-message">
+                    <strong>AI:</strong> I've analyzed your context and generated the CustomerController with comprehensive validation, audit logging, and proper error handling.
+                </div>
+                <div class="user-message">
+                    <strong>You:</strong> Great! Can you add optimistic concurrency control for updates?
+                </div>
+                <div class="ai-message">
+                    <strong>AI:</strong> Excellent suggestion! I've added optimistic concurrency control:<br>
+                    • RowVersion property to Customer entity<br>
+                    • Concurrency exception handling in controller<br>
+                    • Proper 409 Conflict responses for concurrent updates
+                </div>
+            </div>
+
+            <div class="interaction-flow">
+                <h4>Conversation Flow Pattern</h4>
+                <p>Notice how the conversation demonstrates the context engineer's role: providing strategic guidance ("add optimistic concurrency control") while the AI handles implementation details (RowVersion properties, exception handling, HTTP status codes). The human focuses on the "what" and "why," while AI handles the "how."</p>
+            </div>
+
+            <div class="cognitive-insight">
+                <h4>Persistent Collaboration Context</h4>
+                <p>Unlike traditional chat interfaces, the AI maintains awareness of your entire project context, conversation history, and current workspace state. This eliminates the need to constantly re-explain your project setup or repeat previous decisions, creating a more natural collaboration experience.</p>
+            </div>
+        </div>
+
+        <div class="section" id="main-content">
+            <h2>Main Content - Context Engineering Workspace</h2>
+
+            <div class="measurement">
+                Dimensions: 1320px × 460px
+                Position: Center area between sidebars
+                Background: #1e1e1e (primary background)
+                Tab Height: 35px
+                Content Area: 1320px × 425px
+            </div>
+
+            <p>The main content area represents the heart of context engineering - where strategic thinking happens and high-level decisions are made. This space is designed to support the cognitive work of translating business requirements into structured specifications that AI agents can implement effectively.</p>
+
+            <h3>Four Modes of Context Engineering</h3>
+
+            <div class="component-grid">
+                <div class="component-card">
+                    <h4>Context Mode (Primary)</h4>
+                    <p>The most innovative and important mode. Provides a structured interface for defining project purpose, requirements, constraints, and success criteria. This is where the real intellectual work of context engineering happens.</p>
+                </div>
+                <div class="component-card">
+                    <h4>Editor Mode (Review)</h4>
+                    <p>For reviewing and modifying AI-generated code. Unlike traditional IDEs, this isn't for writing code from scratch - it's for understanding, evaluating, and fine-tuning what AI agents have created based on your context.</p>
+                </div>
+                <div class="component-card">
+                    <h4>Preview Mode (Validation)</h4>
+                    <p>Provides live preview of generated applications, API documentation, or other outputs. Helps context engineers validate that AI implementations match their intentions without diving into code details.</p>
+                </div>
+                <div class="component-card">
+                    <h4>Docs Mode (Communication)</h4>
+                    <p>AI-assisted documentation creation and maintenance. Includes both generated documentation from code and human-authored strategic documents that capture decision rationale and context evolution.</p>
+                </div>
+            </div>
+
+            <h3>Context Mode - The Revolutionary Interface</h3>
+
+            <p>Context Mode deserves detailed examination because it represents something that has never existed before in software development tools. This interface transforms the vague, unstructured process of "figuring out what to build" into a systematic, structured workflow that produces consistently high-quality results.</p>
+
+            <div class="workflow-step">
+                <div class="step-number">1</div>
+                <h4>Project Purpose Section</h4>
+                <p>Forces context engineers to clearly articulate the business value and user outcomes their project should achieve. This isn't just a description - it's a strategic statement that guides all subsequent technical decisions. The AI uses this section to understand the "why" behind every implementation choice.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">2</div>
+                <h4>Key Requirements Section</h4>
+                <p>Structures the capture of functional requirements in a way that eliminates ambiguity. Notice how the example uses bullet points and specific language ("CRUD operations," "email validation," "audit trail") rather than vague descriptions. This precision is crucial for AI implementation success.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">3</div>
+                <h4>Technical Constraints Section</h4>
+                <p>Captures the technical boundaries and requirements that constrain implementation choices. This includes performance requirements ("sub-200ms response times"), technology choices ("ASP.NET Core 8.0"), and scale requirements ("1000+ concurrent users"). These constraints guide AI model selection and implementation strategies.</p>
+            </div>
+
+            <div class="component-highlight">
+                <p><strong>Action Button Integration:</strong> The "AI Suggest," "Validate," and "Generate" buttons create a workflow where context engineers can get AI assistance with context definition, validate their specifications against best practices, and trigger implementation when ready. This represents a new type of human-AI collaboration pattern.</p>
+            </div>
+
+            <div class="design-principle">
+                <h4>Form-Based Strategic Thinking</h4>
+                <p>The structured form approach might seem restrictive, but it actually enhances creative thinking by providing a framework for systematic exploration of project requirements. Research in cognitive psychology shows that constraints often improve creative output by focusing attention on relevant dimensions of the problem space.</p>
+            </div>
+
+            <h3>Workspace Header - Command and Control</h3>
+
+            <p>The workspace header serves as both identification and control center for the current context engineering session. The project title ("Customer Management API - Context Definition") provides constant awareness of what you're working on, while the action buttons provide access to AI capabilities.</p>
+
+            <div class="interaction-flow">
+                <h4>AI Integration Workflow</h4>
+                <p>The three action buttons represent different levels of AI engagement: "AI Suggest" provides recommendations for improving your context, "Validate" checks your specifications against best practices and completeness, and "Generate" triggers full implementation when you're satisfied with the context definition. This progressive engagement model gives context engineers control over when and how AI assistance is applied.</p>
+            </div>
+        </div>
+
+        <div class="section" id="bottom-panel">
+            <h2>Bottom Panel - System Feedback</h2>
+
+            <div class="measurement">
+                Dimensions: 1320px × 200px (spans only between sidebars)
+                Position: Bottom center, constrained by sidebar boundaries
+                Background: #252526
+                Tab Height: 30px
+                Content Height: 170px
+            </div>
+
+            <p>The bottom panel serves as the information feedback system for the entire context engineering workflow. Unlike traditional IDEs that primarily show compilation output, this panel displays a richer variety of information types that reflect the complexity of AI-human collaboration.</p>
+
+            <div class="design-principle">
+                <h4>Constrained Width Psychology</h4>
+                <p>By constraining the bottom panel to span only between the sidebars rather than the full screen width, the design creates visual containment that associates this information with the main workspace. This spatial relationship helps context engineers understand that the feedback relates specifically to their central work area, not to sidebar activities.</p>
+            </div>
+
+            <h3>Information Channel Categories</h3>
+
+            <div class="component-grid">
+                <div class="component-card">
+                    <h4>Terminal</h4>
+                    <p>Traditional build commands and system operations, but enhanced for context engineering workflows. Shows not just compilation status but also AI generation commands, context validation results, and deployment preparation steps.</p>
+                </div>
+                <div class="component-card">
+                    <h4>Output</h4>
+                    <p>Results from various system operations including build output, test results, AI generation status, and deployment logs. Provides the detailed information context engineers need to understand what happened during each workflow step.</p>
+                </div>
+                <div class="component-card">
+                    <h4>Problems</h4>
+                    <p>Issues that require attention, including traditional compilation errors but also context validation warnings, AI capability limitations, and strategic decision points that need human input.</p>
+                </div>
+                <div class="component-card">
+                    <h4>AI Logs</h4>
+                    <p>A revolutionary new category of development information. Shows AI decision rationale, model performance metrics, context interpretation results, and the reasoning behind implementation choices. This transparency helps context engineers understand and trust AI collaborators.</p>
+                </div>
+            </div>
+
+            <h3>Terminal Output - Enhanced for AI Collaboration</h3>
+
+            <p>The terminal output shown in the wireframe demonstrates how traditional development feedback evolves in a context engineering environment:</p>
+
+            <div class="code-block">
+$ dotnet restore
+  Restored 42 packages in 2.3s
+$ dotnet build
+Build succeeded.
+AI Agent: Context analysis complete. CustomerController generated with validation.
+Context Engine: Architecture validation passed. Ready for implementation review.
+$ ai generate --component=CustomerService --validate=true
+$ _
+            </div>
+
+            <div class="component-highlight">
+                <p>Notice how traditional commands (dotnet restore, dotnet build) are interspersed with AI-specific feedback and new types of operations (ai generate --component=CustomerService). This integration shows how context engineering extends rather than replaces traditional development workflows.</p>
+            </div>
+
+            <div class="cognitive-insight">
+                <h4>Passive Information Monitoring</h4>
+                <p>The bottom panel uses a monospace font and muted colors specifically to support peripheral monitoring rather than focused reading. Context engineers can glance at this information to stay aware of system status without interrupting their primary thinking tasks in the main workspace.</p>
+            </div>
+
+            <h3>Color-Coded Information Types</h3>
+
+            <div class="color-palette">
+                <div class="color-item" style="background: #4ec9b0;">Success<br>#4ec9b0</div>
+                <div class="color-item" style="background: #569cd6;">Info/AI Status<br>#569cd6</div>
+                <div class="color-item" style="background: #dcdcaa;">Warnings<br>#dcdcaa</div>
+                <div class="color-item" style="background: #888888;">Standard Output<br>#888888</div>
+            </div>
+
+            <p>The color coding helps context engineers quickly scan terminal output for important information without reading every line. Success messages use green to indicate positive progress, AI status messages use blue to distinguish AI activities from human commands, warnings use yellow for attention without alarm, and standard output uses muted gray to avoid competing for attention.</p>
+        </div>
+
+        <div class="section" id="offcanvas">
+            <h2>Offcanvas Panel System</h2>
+
+            <div class="measurement">
+                Panel Dimensions: 300px × 460px
+                Animation: 200ms ease-out slide transition
+                Positioning: Adjacent to triggering sidebar
+                Background: #252526 with subtle drop shadow
+            </div>
+
+            <p>The offcanvas panel system represents one of the most sophisticated aspects of the Engineer IDE interface design. These panels provide detailed access to tools without disrupting the main workspace, creating what interface designers call "contextual tool access" - the ability to dive deep into specific functionality while maintaining awareness of your primary task.</p>
+
+            <div class="design-principle">
+                <h4>Spatial Relationship Preservation</h4>
+                <p>Each offcanvas panel slides out from its associated sidebar, creating a clear spatial relationship between the trigger and the detailed interface. This spatial connection helps context engineers maintain their mental model of where different types of functionality are located, reducing cognitive overhead during complex workflows.</p>
+            </div>
+
+            <h3>File Explorer Panel - Project Structure Visualization</h3>
+
+            <p>The File Explorer panel showcases how traditional development tools evolve in a context engineering environment. Rather than just showing files and folders, it reveals the relationship between human strategic input and AI-generated artifacts.</p>
+
+            <div class="interaction-flow">
+                <h4>Strategic Document Organization</h4>
+                <p>Notice how the file structure separates human-authored documents (in the docs folder) from AI-generated implementation files (in src folders). This organization makes it easy for context engineers to distinguish between strategic decisions they've made and implementation details that AI has handled.</p>
+            </div>
+
+            <div class="component-highlight">
+                <p>Files like "context-definition.md," "api-specification.yml," and "architecture-decisions.md" represent a new category of development artifacts - strategic documents that capture the reasoning and decision-making process, not just the final implementation results.</p>
+            </div>
+
+            <h3>AI Chat Panel - Sophisticated Collaboration Interface</h3>
+
+            <p>The AI Chat panel demonstrates the most innovative aspect of Engineer IDE - a sophisticated interface for ongoing collaboration between human strategic thinking and AI implementation capabilities. This goes far beyond simple question-and-answer patterns to support complex, multi-turn conversations about software architecture and implementation strategies.</p>
+
+            <div class="workflow-step">
+                <div class="step-number">1</div>
+                <h4>Context-Aware Communication</h4>
+                <p>The AI maintains awareness of your project context, conversation history, and current workspace state. When you ask for "optimistic concurrency control," the AI immediately understands you're referring to the Customer entity in your current project and provides specific, relevant implementation details.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">2</div>
+                <h4>Implementation Detail Translation</h4>
+                <p>Notice how your high-level request ("add optimistic concurrency control") gets translated into specific technical implementations (RowVersion property, exception handling, HTTP status codes). This demonstrates the AI's role in bridging strategic requirements with implementation details.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">3</div>
+                <h4>Proactive Collaboration</h4>
+                <p>The AI doesn't just answer questions - it provides context-relevant suggestions and explains the reasoning behind implementation choices. This educational aspect helps context engineers understand the implications of their strategic decisions.</p>
+            </div>
+
+            <div class="ai-conversation">
+                <div class="user-message">
+                    <strong>Typing Indicator:</strong> "You are typing..." shows when the context engineer is formulating their next question or instruction.
+                </div>
+                <div class="ai-message">
+                    <strong>Chat Input:</strong> "Please generate unit tests for concurrency scenarios..." demonstrates how conversations naturally flow from implementation to testing to documentation.
+                </div>
+            </div>
+
+            <div class="cognitive-insight">
+                <h4>Conversation State Management</h4>
+                <p>The chat interface maintains sophisticated state management that goes beyond simple message history. It understands project context, remembers previous decisions, tracks implementation status, and can reference earlier conversations when making new suggestions. This creates a collaborative relationship rather than a series of isolated interactions.</p>
+            </div>
+        </div>
+
+        <div class="section" id="interactions">
+            <h2>User Interaction Patterns</h2>
+
+            <p>The interaction patterns in Engineer IDE are designed to support the unique cognitive demands of context engineering. Unlike traditional development environments that optimize for rapid code input, these patterns prioritize thoughtful decision-making and effective AI collaboration.</p>
+
+            <h3>Progressive Disclosure Pattern</h3>
+
+            <div class="interaction-flow">
+                <h4>Three-Tier Information Architecture</h4>
+                <p>The interface uses a three-tier approach to information display: <strong>Overview (main workspace)</strong> → <strong>Detail (offcanvas panels)</strong> → <strong>Deep Detail (modal dialogs)</strong>. This progression allows context engineers to maintain big-picture awareness while diving into specifics when necessary.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">1</div>
+                <h4>Sidebar Icon Hover</h4>
+                <p>Hovering over sidebar icons reveals tooltips that explain each tool's purpose. This provides just-in-time learning without cluttering the interface with permanent labels that experienced users don't need.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">2</div>
+                <h4>Icon Click → Panel Slide</h4>
+                <p>Clicking a sidebar icon triggers a smooth 200ms slide animation that brings the detailed tool interface into view. The animation provides clear feedback about the action taken and helps maintain spatial awareness of where the information is coming from.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">3</div>
+                <h4>Panel Interaction → Workspace Update</h4>
+                <p>Actions taken in offcanvas panels (like selecting a file or sending an AI chat message) update the main workspace appropriately. This integration ensures that detailed interactions connect meaningfully with primary work.</p>
+            </div>
+
+            <h3>AI Collaboration Interaction Patterns</h3>
+
+            <div class="component-highlight">
+                <p><strong>Conversational Flow Management:</strong> The AI chat supports natural conversation patterns including interruptions, clarifications, and topic changes. Context engineers can ask follow-up questions, request modifications, or change direction without losing conversation context.</p>
+            </div>
+
+            <div class="design-principle">
+                <h4>Human-in-the-Loop Control</h4>
+                <p>Every AI interaction pattern maintains human control and oversight. The AI can suggest, analyze, and implement, but context engineers always make the final decisions about what gets accepted, modified, or rejected. This control structure is built into the interface at every level.</p>
+            </div>
+
+            <h3>Context Mode Interaction Workflow</h3>
+
+            <p>The Context Mode represents the most innovative interaction pattern in Engineer IDE. It transforms the traditionally unstructured process of requirements gathering into a systematic, AI-supported workflow.</p>
+
+            <div class="workflow-step">
+                <div class="step-number">1</div>
+                <h4>Form-Guided Thinking</h4>
+                <p>The structured form guides context engineers through systematic consideration of project dimensions they might otherwise overlook. Each section builds on previous sections, creating a logical flow from purpose to requirements to constraints.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">2</div>
+                <h4>AI-Assisted Refinement</h4>
+                <p>The "AI Suggest" button provides context-specific recommendations for improving requirement clarity, identifying missing considerations, or suggesting industry best practices relevant to the project type.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">3</div>
+                <h4>Validation and Iteration</h4>
+                <p>The "Validate" button runs the context definition through AI analysis to identify potential issues, inconsistencies, or missing information before implementation begins. This prevents costly downstream problems.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">4</div>
+                <h4>Implementation Trigger</h4>
+                <p>The "Generate" button initiates AI implementation only when the context engineer is satisfied with the definition completeness and quality. This maintains human control over when the transition from strategy to implementation occurs.</p>
+            </div>
+        </div>
+
+        <div class="section" id="workflow">
+            <h2>Complete Context Engineering Workflow</h2>
+
+            <p>Understanding how all these interface components work together reveals the revolutionary nature of context engineering as a development methodology. This isn't just a new tool - it's a fundamentally different approach to creating software that leverages the complementary strengths of human strategic thinking and AI implementation capabilities.</p>
+
+            <h3>End-to-End Workflow Example</h3>
+
+            <div class="workflow-step">
+                <div class="step-number">1</div>
+                <h4>Project Initialization</h4>
+                <p>Context engineer creates new project through File menu, selects appropriate context template (if available), and begins with high-level purpose definition. The interface guides them through systematic consideration of business value and user outcomes.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">2</div>
+                <h4>Context Definition Phase</h4>
+                <p>Using the structured Context Mode interface, the engineer systematically defines project purpose, functional requirements, technical constraints, and success criteria. The AI Suggest button provides recommendations for improving clarity and completeness throughout this process.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">3</div>
+                <h4>Context Validation and Refinement</h4>
+                <p>The Validate button triggers AI analysis of the context definition, identifying potential issues, missing information, or inconsistencies. The context engineer reviews feedback and refines the definition until validation passes completely.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">4</div>
+                <h4>AI Implementation Generation</h4>
+                <p>The Generate button initiates AI implementation based on the validated context. Multiple AI agents may work in parallel - one generating entity models, another creating API controllers, another building test suites. Progress appears in the bottom panel terminal output.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">5</div>
+                <h4>Implementation Review and Refinement</h4>
+                <p>Context engineer switches to Editor Mode to review generated code, uses AI Chat to request modifications or improvements, and employs Code Analysis tools to validate quality and completeness. This is collaborative refinement, not writing code from scratch.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">6</div>
+                <h4>Documentation and Knowledge Capture</h4>
+                <p>Using Docs Mode and the Documentation Assistant, the engineer creates comprehensive documentation that captures not just what was built, but why key decisions were made and how the implementation reflects the original context requirements.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">7</div>
+                <h4>Testing and Validation</h4>
+                <p>Preview Mode provides live testing of generated implementations. Context engineers can validate that the AI's interpretation of their requirements matches their intentions without needing to understand implementation details.</p>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">8</div>
+                <h4>Version Control and Knowledge Management</h4>
+                <p>The enhanced Git tools commit not just code changes but context evolution, AI conversation history, and decision rationale. This creates a complete audit trail of both strategic thinking and implementation decisions.</p>
+            </div>
+
+            <div class="design-principle">
+                <h4>Workflow Amplification vs. Replacement</h4>
+                <p>Notice how this workflow amplifies human cognitive capabilities rather than replacing them. Context engineers focus on strategic thinking, problem understanding, and quality evaluation - the most valuable and irreplaceable aspects of software development - while AI handles the mechanical aspects of implementation.</p>
+            </div>
+
+            <h3>Collaboration Patterns Throughout the Workflow</h3>
+
+            <div class="cognitive-insight">
+                <h4>Continuous AI Collaboration</h4>
+                <p>Unlike traditional development where AI might be consulted occasionally, context engineering involves continuous collaboration. The AI Chat panel remains active throughout the workflow, providing suggestions, answering questions, explaining implementation choices, and helping the context engineer understand the implications of their strategic decisions.</p>
+            </div>
+
+            <div class="interaction-flow">
+                <h4>Quality Feedback Loops</h4>
+                <p>The interface supports multiple quality feedback loops: context validation before implementation, code analysis after generation, preview testing of functionality, and documentation review for completeness. These loops ensure quality at each stage rather than discovering problems only at the end.</p>
+            </div>
+        </div>
+
+        <div class="section" id="technical">
+            <h2>Technical Implementation Notes</h2>
+
+            <p>Implementing this interface requires careful consideration of the unique technical challenges presented by AI-human collaboration workflows. The interface must remain responsive during AI operations, maintain complex state across multiple interaction modes, and provide seamless integration between traditional development tools and innovative AI capabilities.</p>
+
+            <h3>MAUI Blazor Hybrid Architecture Considerations</h3>
+
+            <div class="tech-spec">
+                <h4>Component Architecture</h4>
+                <p>Each major interface section (sidebars, main content, panels) should be implemented as separate Blazor components with clear data interfaces. This modular approach enables independent development, testing, and maintenance while supporting the complex state management required for AI collaboration.</p>
+            </div>
+
+            <div class="tech-spec">
+                <h4>State Management Strategy</h4>
+                <p>The interface requires sophisticated state management to handle context definitions, AI conversation history, file system state, and UI interaction state simultaneously. Consider using a combination of Blazor state management patterns with careful attention to performance during AI operations.</p>
+            </div>
+
+            <div class="tech-spec">
+                <h4>Cross-Platform Responsiveness</h4>
+                <p>The fixed layout design optimizes for desktop development workflows but should include responsive breakpoints for tablet use. Mobile support may require a fundamentally different interface approach due to the complex information density requirements.</p>
+            </div>
+
+            <h3>AI Integration Technical Requirements</h3>
+
+            <div class="component-highlight">
+                <p><strong>Asynchronous AI Operations:</strong> All AI interactions must be implemented asynchronously to prevent UI blocking during potentially long-running operations like code generation or analysis. The interface should provide clear progress indication and allow users to continue other work while AI operations execute.</p>
+            </div>
+
+            <div class="tech-spec">
+                <h4>Multi-Provider AI Support</h4>
+                <p>The architecture must support multiple AI providers (OpenAI, Anthropic, local models) through abstracted interfaces that allow seamless switching based on task requirements or user preferences. Each provider may have different capabilities, response formats, and performance characteristics.</p>
+            </div>
+
+            <div class="tech-spec">
+                <h4>Context Persistence and Synchronization</h4>
+                <p>Unlike traditional IDEs that primarily save files, Engineer IDE must persist and synchronize complex context objects, conversation histories, and AI interaction state. This requires sophisticated data modeling and potentially real-time synchronization capabilities.</p>
+            </div>
+
+            <h3>Performance and Usability Considerations</h3>
+
+            <div class="cognitive-insight">
+                <h4>Cognitive Performance Optimization</h4>
+                <p>The interface performance requirements go beyond traditional metrics like load time and frame rate. The design must optimize for cognitive performance - reducing mental overhead, supporting sustained concentration, and minimizing interruptions during complex thinking tasks.</p>
+            </div>
+
+            <div class="tech-spec">
+                <h4>Animation and Transition Performance</h4>
+                <p>All interface animations (offcanvas slides, tab transitions, loading states) must maintain 60fps performance to avoid disrupting the calm, professional feel of the interface. Smooth animations are particularly important for maintaining spatial awareness during panel transitions.</p>
+            </div>
+
+            <div class="tech-spec">
+                <h4>Accessibility and Inclusive Design</h4>
+                <p>The muted color palette and low-contrast design approach requires careful attention to accessibility standards. All interactive elements must meet WCAG guidelines while maintaining the calm visual aesthetic that supports extended concentration.</p>
+            </div>
+
+            <h3>Security and Privacy Considerations</h3>
+
+            <div class="component-highlight">
+                <p><strong>AI Provider Security:</strong> The interface must handle AI API keys securely, provide options for on-premise AI deployment, and allow users to control what information gets sent to external AI providers. Context definitions may contain sensitive business information that requires careful handling.</p>
+            </div>
+
+            <div class="tech-spec">
+                <h4>Conversation Privacy</h4>
+                <p>AI conversations may contain sensitive project information, strategic decisions, or proprietary business logic. The system must provide options for local conversation storage, encryption of sensitive data, and user control over conversation retention policies.</p>
+            </div>
+
+            <p>This comprehensive interface represents a significant evolution in development environment design. By understanding how each component supports the context engineering workflow, developers can create an environment that truly amplifies human cognitive capabilities while leveraging the implementation power of AI collaboration.</p>
+
+            <div class="design-principle">
+                <h4>The Future of Development Interfaces</h4>
+                <p>Engineer IDE demonstrates how development environments must evolve to support new paradigms of human-AI collaboration. This isn't just about adding chat features to traditional IDEs - it requires rethinking the fundamental assumptions about how software gets created and what role human intelligence plays in that process.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

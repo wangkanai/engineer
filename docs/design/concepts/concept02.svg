@@ -1,0 +1,300 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main Canvas Background -->
+  <rect width="1440" height="900" fill="#1e1e1e"/>
+  
+  <!-- Top Navigation Bar (1440 x 40px) -->
+  <g id="top-navigation">
+    <rect width="1440" height="40" fill="#2d2d30"/>
+    <line x1="0" y1="40" x2="1440" y2="40" stroke="#3e3e42" stroke-width="1"/>
+    
+    <!-- Logo -->
+    <text x="15" y="26" fill="#888888" font-family="Inter" font-size="14" font-weight="600">⚡ Engineer IDE</text>
+    
+    <!-- Navigation Menu -->
+    <text x="140" y="26" fill="#888888" font-family="Inter" font-size="13">File</text>
+    <text x="170" y="26" fill="#888888" font-family="Inter" font-size="13">Edit</text>
+    <text x="200" y="26" fill="#888888" font-family="Inter" font-size="13">View</text>
+    <text x="235" y="26" fill="#888888" font-family="Inter" font-size="13">Context</text>
+    <text x="285" y="26" fill="#888888" font-family="Inter" font-size="13">AI</text>
+    <text x="305" y="26" fill="#888888" font-family="Inter" font-size="13">Tools</text>
+    <text x="345" y="26" fill="#888888" font-family="Inter" font-size="13">Help</text>
+    
+    <!-- Project Status -->
+    <text x="1200" y="26" fill="#888888" font-family="Inter" font-size="12">Project: Customer Management API</text>
+    <circle cx="1410" cy="20" r="4" fill="#4ec9b0"/>
+  </g>
+  
+  <!-- Left Sidebar (60 x 660px, spans from top nav to bottom) -->
+  <g id="left-sidebar">
+    <rect x="0" y="40" width="60" height="660" fill="#252526"/>
+    <line x1="60" y1="40" x2="60" y2="700" stroke="#3e3e42" stroke-width="1"/>
+    
+    <!-- Left Sidebar Icons (clean icons without button styling) -->
+    <g id="left-sidebar-icons">
+      <!-- File Explorer -->
+      <text x="30" y="75" fill="#888888" font-family="Inter" font-size="20" text-anchor="middle">📁</text>
+      
+      <!-- Git Repository -->
+      <text x="30" y="123" fill="#888888" font-family="Inter" font-size="20" text-anchor="middle">🔗</text>
+      
+      <!-- Context Manager -->
+      <text x="30" y="171" fill="#888888" font-family="Inter" font-size="20" text-anchor="middle">🎯</text>
+      
+      <!-- Extensions -->
+      <text x="30" y="219" fill="#888888" font-family="Inter" font-size="20" text-anchor="middle">🧩</text>
+      
+      <!-- Settings -->
+      <text x="30" y="267" fill="#888888" font-family="Inter" font-size="20" text-anchor="middle">⚙️</text>
+    </g>
+  </g>
+  
+  <!-- Right Sidebar (60 x 660px, spans from top nav to bottom) -->
+  <g id="right-sidebar">
+    <rect x="1380" y="40" width="60" height="660" fill="#252526"/>
+    <line x1="1380" y1="40" x2="1380" y2="700" stroke="#3e3e42" stroke-width="1"/>
+    
+    <!-- Right Sidebar Icons (clean icons without button styling) -->
+    <g id="right-sidebar-icons">
+      <!-- AI Chat -->
+      <text x="1410" y="75" fill="#888888" font-family="Inter" font-size="20" text-anchor="middle">🤖</text>
+      
+      <!-- Documentation Assistant -->
+      <text x="1410" y="123" fill="#888888" font-family="Inter" font-size="20" text-anchor="middle">📚</text>
+      
+      <!-- Code Analysis -->
+      <text x="1410" y="171" fill="#888888" font-family="Inter" font-size="20" text-anchor="middle">🔍</text>
+      
+      <!-- AI Models -->
+      <text x="1410" y="219" fill="#888888" font-family="Inter" font-size="20" text-anchor="middle">🧠</text>
+      
+      <!-- Workflow -->
+      <text x="1410" y="267" fill="#888888" font-family="Inter" font-size="20" text-anchor="middle">🔄</text>
+    </g>
+  </g>
+  
+  <!-- Main Content Area (1320 x 460px, positioned between sidebars) -->
+  <g id="main-content">
+    <rect x="60" y="40" width="1320" height="460" fill="#1e1e1e"/>
+    
+    <!-- Content Tabs (35px height) -->
+    <g id="content-tabs">
+      <rect x="60" y="40" width="1320" height="35" fill="#2d2d30"/>
+      <line x1="60" y1="75" x2="1380" y2="75" stroke="#3e3e42" stroke-width="1"/>
+      
+      <!-- Context Tab (Active) -->
+      <rect x="75" y="48" width="70" height="27" rx="3" fill="#1e1e1e"/>
+      <text x="110" y="64" fill="#cccccc" font-family="Inter" font-size="13" text-anchor="middle">Context</text>
+      
+      <!-- Other Tabs -->
+      <text x="170" y="64" fill="#888888" font-family="Inter" font-size="13">Editor</text>
+      <text x="220" y="64" fill="#888888" font-family="Inter" font-size="13">Preview</text>
+      <text x="275" y="64" fill="#888888" font-family="Inter" font-size="13">Docs</text>
+    </g>
+    
+    <!-- Workspace Container -->
+    <g id="workspace-container">
+      <rect x="80" y="95" width="1280" height="385" rx="6" fill="#252526" stroke="#3e3e42" stroke-width="1"/>
+      
+      <!-- Workspace Header -->
+      <text x="100" y="120" fill="#cccccc" font-family="Inter" font-size="16" font-weight="600">Customer Management API - Context Definition</text>
+      <line x1="100" y1="130" x2="1340" y2="130" stroke="#3e3e42" stroke-width="1"/>
+      
+      <!-- Action Buttons -->
+      <rect x="1150" y="100" width="80" height="24" rx="3" fill="#0e639c"/>
+      <text x="1190" y="115" fill="#ffffff" font-family="Inter" font-size="12" text-anchor="middle">💡 AI Suggest</text>
+      
+      <rect x="1240" y="100" width="60" height="24" rx="3" fill="#0e639c"/>
+      <text x="1270" y="115" fill="#ffffff" font-family="Inter" font-size="12" text-anchor="middle">✅ Validate</text>
+      
+      <rect x="1310" y="100" width="60" height="24" rx="3" fill="#0e639c"/>
+      <text x="1340" y="115" fill="#ffffff" font-family="Inter" font-size="12" text-anchor="middle">🚀 Generate</text>
+      
+      <!-- Context Form Fields -->
+      <g id="context-form">
+        <!-- Project Purpose -->
+        <text x="100" y="155" fill="#cccccc" font-family="Inter" font-size="13" font-weight="500">Project Purpose</text>
+        <rect x="100" y="162" width="1240" height="80" rx="3" fill="#1e1e1e" stroke="#3e3e42" stroke-width="1"/>
+        <text x="108" y="182" fill="#888888" font-family="Inter" font-size="13">Build a RESTful API for customer management with CRUD operations, email validation, and audit logging.</text>
+        <text x="108" y="200" fill="#888888" font-family="Inter" font-size="13">Focus on scalability and maintainability for enterprise use.</text>
+        
+        <!-- Key Requirements -->
+        <text x="100" y="265" fill="#cccccc" font-family="Inter" font-size="13" font-weight="500">Key Requirements</text>
+        <rect x="100" y="272" width="1240" height="100" rx="3" fill="#1e1e1e" stroke="#3e3e42" stroke-width="1"/>
+        <text x="108" y="292" fill="#888888" font-family="Inter" font-size="13">• Customer CRUD operations (Create, Read, Update, Delete)</text>
+        <text x="108" y="310" fill="#888888" font-family="Inter" font-size="13">• Email address validation and uniqueness constraints</text>
+        <text x="108" y="328" fill="#888888" font-family="Inter" font-size="13">• Comprehensive audit trail for all customer changes</text>
+        <text x="108" y="346" fill="#888888" font-family="Inter" font-size="13">• RESTful API design with proper HTTP status codes and error handling</text>
+        <text x="108" y="364" fill="#888888" font-family="Inter" font-size="13">• Data pagination for efficient list operations</text>
+        
+        <!-- Technical Constraints -->
+        <text x="100" y="395" fill="#cccccc" font-family="Inter" font-size="13" font-weight="500">Technical Constraints</text>
+        <rect x="100" y="402" width="1240" height="60" rx="3" fill="#1e1e1e" stroke="#3e3e42" stroke-width="1"/>
+        <text x="108" y="422" fill="#888888" font-family="Inter" font-size="13">• ASP.NET Core 8.0 with Entity Framework Core and SQL Server</text>
+        <text x="108" y="440" fill="#888888" font-family="Inter" font-size="13">• JWT authentication, support for 1000+ concurrent users, sub-200ms response times</text>
+        <text x="108" y="458" fill="#888888" font-family="Inter" font-size="13">• OpenAPI/Swagger documentation, comprehensive unit test coverage</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Bottom Panel (1320 x 200px, spans only between sidebars) -->
+  <g id="bottom-panel">
+    <rect x="60" y="700" width="1320" height="200" fill="#252526"/>
+    <line x1="60" y1="700" x2="1380" y2="700" stroke="#3e3e42" stroke-width="1"/>
+    
+    <!-- Panel Tabs (30px height) -->
+    <g id="panel-tabs">
+      <rect x="60" y="700" width="1320" height="30" fill="#2d2d30"/>
+      <line x1="60" y1="730" x2="1380" y2="730" stroke="#3e3e42" stroke-width="1"/>
+      
+      <!-- Terminal Tab (Active) -->
+      <rect x="75" y="704" width="60" height="22" rx="3" fill="#1e1e1e"/>
+      <text x="105" y="717" fill="#cccccc" font-family="Inter" font-size="12" text-anchor="middle">Terminal</text>
+      
+      <!-- Other Tabs -->
+      <text x="155" y="717" fill="#888888" font-family="Inter" font-size="12">Output</text>
+      <text x="200" y="717" fill="#888888" font-family="Inter" font-size="12">Problems</text>
+      <text x="260" y="717" fill="#888888" font-family="Inter" font-size="12">AI Logs</text>
+      <text x="315" y="717" fill="#888888" font-family="Inter" font-size="12">Debug Console</text>
+    </g>
+    
+    <!-- Panel Content Area -->
+    <g id="panel-content">
+      <text x="75" y="750" fill="#888888" font-family="Consolas" font-size="12">$ dotnet restore</text>
+      <text x="75" y="768" fill="#4ec9b0" font-family="Consolas" font-size="12">  Restored 42 packages in 2.3s</text>
+      <text x="75" y="786" fill="#888888" font-family="Consolas" font-size="12">$ dotnet build</text>
+      <text x="75" y="804" fill="#4ec9b0" font-family="Consolas" font-size="12">Build succeeded.</text>
+      <text x="75" y="822" fill="#569cd6" font-family="Consolas" font-size="12">AI Agent: Context analysis complete. CustomerController generated with validation.</text>
+      <text x="75" y="840" fill="#dcdcaa" font-family="Consolas" font-size="12">Context Engine: Architecture validation passed. Ready for implementation review.</text>
+      <text x="75" y="858" fill="#888888" font-family="Consolas" font-size="12">$ ai generate --component=CustomerService --validate=true</text>
+      <text x="75" y="876" fill="#888888" font-family="Consolas" font-size="12">$ _</text>
+    </g>
+  </g>
+  
+  <!-- File Explorer Offcanvas Panel (300px wide, full height 660px like sidebar) -->
+  <g id="file-explorer-offcanvas" opacity="0.95">
+    <rect x="60" y="40" width="300" height="660" fill="#252526" stroke="#3e3e42" stroke-width="1"/>
+    <filter id="panelShadow">
+      <feDropShadow dx="4" dy="0" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <rect x="60" y="40" width="300" height="660" fill="#252526" stroke="#3e3e42" stroke-width="1" filter="url(#panelShadow)"/>
+    
+    <!-- Panel Header -->
+    <rect x="60" y="40" width="300" height="40" fill="#2d2d30"/>
+    <line x1="60" y1="80" x2="360" y2="80" stroke="#3e3e42" stroke-width="1"/>
+    <text x="75" y="63" fill="#cccccc" font-family="Inter" font-size="14" font-weight="600">File Explorer</text>
+    <text x="335" y="63" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">×</text>
+    
+    <!-- File Tree Content -->
+    <g id="file-tree">
+      <text x="75" y="105" fill="#888888" font-family="Inter" font-size="13">📁 CustomerApi.sln</text>
+      <text x="75" y="125" fill="#888888" font-family="Inter" font-size="13">📁 src/</text>
+      <text x="95" y="145" fill="#888888" font-family="Inter" font-size="13">📁 CustomerApi.Core/</text>
+      <text x="115" y="165" fill="#888888" font-family="Inter" font-size="13">📄 Customer.cs</text>
+      <text x="115" y="185" fill="#888888" font-family="Inter" font-size="13">📄 ICustomerRepository.cs</text>
+      <text x="95" y="205" fill="#888888" font-family="Inter" font-size="13">📁 CustomerApi.Web/</text>
+      <text x="115" y="225" fill="#888888" font-family="Inter" font-size="13">📁 Controllers/</text>
+      <text x="135" y="245" fill="#888888" font-family="Inter" font-size="13">📄 CustomerController.cs</text>
+      <text x="115" y="265" fill="#888888" font-family="Inter" font-size="13">📁 Services/</text>
+      <text x="135" y="285" fill="#888888" font-family="Inter" font-size="13">📄 CustomerService.cs</text>
+      <text x="95" y="305" fill="#888888" font-family="Inter" font-size="13">📁 CustomerApi.Tests/</text>
+      <text x="115" y="325" fill="#888888" font-family="Inter" font-size="13">📄 CustomerControllerTests.cs</text>
+      <text x="75" y="345" fill="#888888" font-family="Inter" font-size="13">📁 docs/</text>
+      <text x="95" y="365" fill="#888888" font-family="Inter" font-size="13">📄 context-definition.md</text>
+      <text x="95" y="385" fill="#888888" font-family="Inter" font-size="13">📄 api-specification.yml</text>
+      <text x="95" y="405" fill="#888888" font-family="Inter" font-size="13">📄 architecture-decisions.md</text>
+      <text x="95" y="425" fill="#888888" font-family="Inter" font-size="13">📄 deployment-guide.md</text>
+      <text x="95" y="445" fill="#888888" font-family="Inter" font-size="13">📄 performance-requirements.md</text>
+      <text x="75" y="465" fill="#888888" font-family="Inter" font-size="13">📁 scripts/</text>
+      <text x="95" y="485" fill="#888888" font-family="Inter" font-size="13">📄 build.ps1</text>
+      <text x="95" y="505" fill="#888888" font-family="Inter" font-size="13">📄 deploy.sh</text>
+      <text x="75" y="525" fill="#888888" font-family="Inter" font-size="13">📁 .github/</text>
+      <text x="95" y="545" fill="#888888" font-family="Inter" font-size="13">📁 workflows/</text>
+      <text x="115" y="565" fill="#888888" font-family="Inter" font-size="13">📄 ci-cd.yml</text>
+      <text x="75" y="585" fill="#888888" font-family="Inter" font-size="13">📄 .gitignore</text>
+      <text x="75" y="605" fill="#888888" font-family="Inter" font-size="13">📄 README.md</text>
+      <text x="75" y="625" fill="#888888" font-family="Inter" font-size="13">📄 CONTRIBUTING.md</text>
+      <text x="75" y="645" fill="#888888" font-family="Inter" font-size="13">📄 LICENSE</text>
+    </g>
+  </g>
+  
+  <!-- AI Chat Offcanvas Panel (300px wide, full height 660px like sidebar) -->
+  <g id="ai-chat-offcanvas" opacity="0.95">
+    <rect x="1080" y="40" width="300" height="660" fill="#252526" stroke="#3e3e42" stroke-width="1" filter="url(#panelShadow)"/>
+    
+    <!-- Panel Header -->
+    <rect x="1080" y="40" width="300" height="40" fill="#2d2d30"/>
+    <line x1="1080" y1="80" x2="1380" y2="80" stroke="#3e3e42" stroke-width="1"/>
+    <text x="1095" y="63" fill="#cccccc" font-family="Inter" font-size="14" font-weight="600">AI Assistant</text>
+    <text x="1355" y="63" fill="#888888" font-family="Inter" font-size="16" text-anchor="middle">×</text>
+    
+    <!-- Chat Messages -->
+    <g id="chat-messages">
+      <!-- AI Message 1 -->
+      <rect x="1095" y="95" width="270" height="65" rx="4" fill="#1e1e1e"/>
+      <text x="1103" y="113" fill="#569cd6" font-family="Inter" font-size="13" font-weight="500">AI:</text>
+      <text x="1103" y="130" fill="#888888" font-family="Inter" font-size="12">I've analyzed your context and generated the CustomerController with</text>
+      <text x="1103" y="145" fill="#888888" font-family="Inter" font-size="12">comprehensive validation, audit logging, and proper error handling.</text>
+      
+      <!-- User Message -->
+      <rect x="1095" y="170" width="270" height="40" rx="4" fill="#1e1e1e"/>
+      <text x="1103" y="188" fill="#cccccc" font-family="Inter" font-size="13" font-weight="500">You:</text>
+      <text x="1103" y="205" fill="#888888" font-family="Inter" font-size="12">Great! Can you add optimistic concurrency control for updates?</text>
+      
+      <!-- AI Message 2 -->
+      <rect x="1095" y="220" width="270" height="85" rx="4" fill="#1e1e1e"/>
+      <text x="1103" y="238" fill="#569cd6" font-family="Inter" font-size="13" font-weight="500">AI:</text>
+      <text x="1103" y="255" fill="#888888" font-family="Inter" font-size="12">Excellent suggestion! I've added optimistic concurrency control:</text>
+      <text x="1103" y="270" fill="#888888" font-family="Inter" font-size="12">• RowVersion property to Customer entity</text>
+      <text x="1103" y="285" fill="#888888" font-family="Inter" font-size="12">• Concurrency exception handling in controller</text>
+      <text x="1103" y="300" fill="#888888" font-family="Inter" font-size="12">• Proper 409 Conflict responses for concurrent updates</text>
+      
+      <!-- User Message 2 -->
+      <rect x="1095" y="315" width="270" height="55" rx="4" fill="#1e1e1e"/>
+      <text x="1103" y="333" fill="#cccccc" font-family="Inter" font-size="13" font-weight="500">You:</text>
+      <text x="1103" y="350" fill="#888888" font-family="Inter" font-size="12">Perfect! Now generate comprehensive unit tests for the concurrency</text>
+      <text x="1103" y="365" fill="#888888" font-family="Inter" font-size="12">scenarios. Include both success and conflict cases.</text>
+      
+      <!-- AI Message 3 -->
+      <rect x="1095" y="380" width="270" height="120" rx="4" fill="#1e1e1e"/>
+      <text x="1103" y="398" fill="#569cd6" font-family="Inter" font-size="13" font-weight="500">AI:</text>
+      <text x="1103" y="415" fill="#888888" font-family="Inter" font-size="12">I've generated comprehensive concurrency tests including:</text>
+      <text x="1103" y="430" fill="#888888" font-family="Inter" font-size="12">• Successful update with correct RowVersion</text>
+      <text x="1103" y="445" fill="#888888" font-family="Inter" font-size="12">• Conflict detection with stale RowVersion</text>
+      <text x="1103" y="460" fill="#888888" font-family="Inter" font-size="12">• Proper exception handling and 409 responses</text>
+      <text x="1103" y="475" fill="#888888" font-family="Inter" font-size="12">• Integration tests with actual database operations</text>
+      <text x="1103" y="490" fill="#888888" font-family="Inter" font-size="12">All tests follow AAA pattern with clear naming conventions.</text>
+      
+      <!-- User Message 3 -->
+      <rect x="1095" y="510" width="270" height="40" rx="4" fill="#1e1e1e"/>
+      <text x="1103" y="528" fill="#cccccc" font-family="Inter" font-size="13" font-weight="500">You:</text>
+      <text x="1103" y="545" fill="#888888" font-family="Inter" font-size="12">Excellent! Can you also generate API documentation?</text>
+      
+      <!-- AI Message 4 -->
+      <rect x="1095" y="560" width="270" height="85" rx="4" fill="#1e1e1e"/>
+      <text x="1103" y="578" fill="#569cd6" font-family="Inter" font-size="13" font-weight="500">AI:</text>
+      <text x="1103" y="595" fill="#888888" font-family="Inter" font-size="12">I've generated comprehensive OpenAPI documentation with:</text>
+      <text x="1103" y="610" fill="#888888" font-family="Inter" font-size="12">• Complete endpoint descriptions and examples</text>
+      <text x="1103" y="625" fill="#888888" font-family="Inter" font-size="12">• Request/response schemas with validation rules</text>
+      <text x="1103" y="640" fill="#888888" font-family="Inter" font-size="12">• Error response documentation including 409 conflicts</text>
+    </g>
+    
+    <!-- Chat Input -->
+    <rect x="1095" y="655" width="270" height="30" rx="4" fill="#1e1e1e" stroke="#3e3e42" stroke-width="1"/>
+    <text x="1103" y="673" fill="#666666" font-family="Inter" font-size="12">Ask about architecture decisions or request changes...</text>
+  </g>
+  
+  <!-- Measurement Annotations (for reference) -->
+  <g id="annotations" opacity="0.3">
+    <!-- Dimension indicators -->
+    <text x="720" y="25" fill="#4ec9b0" font-family="Inter" font-size="10" text-anchor="middle">1440px</text>
+    <text x="30" y="370" fill="#4ec9b0" font-family="Inter" font-size="10" text-anchor="middle" transform="rotate(-90, 30, 370)">660px</text>
+    <text x="720" y="515" fill="#4ec9b0" font-family="Inter" font-size="10" text-anchor="middle">460px</text>
+    <text x="720" y="800" fill="#4ec9b0" font-family="Inter" font-size="10" text-anchor="middle">200px</text>
+    
+    <!-- Component labels -->
+    <text x="30" y="55" fill="#dcdcaa" font-family="Inter" font-size="9" text-anchor="middle" transform="rotate(-90, 30, 55)">60px</text>
+    <text x="1410" y="55" fill="#dcdcaa" font-family="Inter" font-size="9" text-anchor="middle" transform="rotate(-90, 1410, 55)">60px</text>
+    <text x="210" y="280" fill="#ffd93d" font-family="Inter" font-size="9" text-anchor="middle">300px</text>
+    <text x="1230" y="280" fill="#ffd93d" font-family="Inter" font-size="9" text-anchor="middle">300px</text>
+  </g>
+</svg>
