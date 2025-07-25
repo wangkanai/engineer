@@ -1,15 +1,22 @@
 <svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Filter definitions -->
+  <defs>
+    <filter id="templatePanelShadow">
+      <feDropShadow dx="6" dy="0" stdDeviation="12" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
   <!-- Main Canvas Background -->
-  <rect width="1440" height="900" fill="#1a1a1a"/>
-  
+  <rect width="1440" height="900" fill="#1a1a1a" />
+
   <!-- Enhanced Top Navigation Bar (1440 x 50px - increased height) -->
   <g id="enhanced-navigation">
-    <rect width="1440" height="50" fill="#2d2d30"/>
-    <line x1="0" y1="50" x2="1440" y2="50" stroke="#404040" stroke-width="1"/>
-    
+    <rect width="1440" height="50" fill="#2d2d30" />
+    <line x1="0" y1="50" x2="1440" y2="50" stroke="#404040" stroke-width="1" />
+
     <!-- Logo with enhanced branding -->
     <text x="15" y="32" fill="#4ec9b0" font-family="Inter" font-size="16" font-weight="700">⚡ Engineer IDE</text>
-    
+
     <!-- Enhanced Navigation Menu -->
     <text x="150" y="32" fill="#cccccc" font-family="Inter" font-size="13">File</text>
     <text x="180" y="32" fill="#cccccc" font-family="Inter" font-size="13">Edit</text>
@@ -18,280 +25,280 @@
     <text x="295" y="32" fill="#cccccc" font-family="Inter" font-size="13">AI</text>
     <text x="315" y="32" fill="#cccccc" font-family="Inter" font-size="13">Tools</text>
     <text x="355" y="32" fill="#cccccc" font-family="Inter" font-size="13">Help</text>
-    
+
     <!-- Context Quality Indicator -->
-    <rect x="500" y="20" width="200" height="10" rx="5" fill="#333333"/>
-    <rect x="500" y="20" width="140" height="10" rx="5" fill="#4ec9b0"/>
+    <rect x="500" y="20" width="200" height="10" rx="5" fill="#333333" />
+    <rect x="500" y="20" width="140" height="10" rx="5" fill="#4ec9b0" />
     <text x="720" y="28" fill="#4ec9b0" font-family="Inter" font-size="11" font-weight="500">Context: 70% Complete</text>
-    
+
     <!-- Stakeholder Presence -->
-    <circle cx="850" cy="25" r="8" fill="#569cd6" stroke="#ffffff" stroke-width="2"/>
-    <circle cx="870" cy="25" r="8" fill="#dcdcaa" stroke="#ffffff" stroke-width="2"/>
-    <circle cx="890" cy="25" r="8" fill="#f44747" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="850" cy="25" r="8" fill="#569cd6" stroke="#ffffff" stroke-width="2" />
+    <circle cx="870" cy="25" r="8" fill="#dcdcaa" stroke="#ffffff" stroke-width="2" />
+    <circle cx="890" cy="25" r="8" fill="#f44747" stroke="#ffffff" stroke-width="2" />
     <text x="910" y="29" fill="#888888" font-family="Inter" font-size="11">3 Stakeholders Online</text>
-    
+
     <!-- Project Status with breadcrumbs -->
     <text x="1100" y="28" fill="#888888" font-family="Inter" font-size="12">Customer API</text>
     <text x="1180" y="28" fill="#666666" font-family="Inter" font-size="12">→</text>
     <text x="1200" y="28" fill="#888888" font-family="Inter" font-size="12">Strategic Layer</text>
     <text x="1280" y="28" fill="#666666" font-family="Inter" font-size="12">→</text>
     <text x="1300" y="28" fill="#4ec9b0" font-family="Inter" font-size="12">Business Objectives</text>
-    
+
     <!-- Validation Status -->
-    <circle cx="1410" cy="25" r="6" fill="#4ec9b0"/>
+    <circle cx="1410" cy="25" r="6" fill="#4ec9b0" />
     <text x="1425" y="29" fill="#4ec9b0" font-family="Inter" font-size="10">Validated</text>
   </g>
-  
+
   <!-- Enhanced Left Sidebar (70px width - increased) -->
   <g id="enhanced-left-sidebar">
-    <rect x="0" y="50" width="70" height="650" fill="#252526"/>
-    <line x1="70" y1="50" x2="70" y2="700" stroke="#404040" stroke-width="1"/>
-    
+    <rect x="0" y="50" width="70" height="650" fill="#252526" />
+    <line x1="70" y1="50" x2="70" y2="700" stroke="#404040" stroke-width="1" />
+
     <!-- Enhanced Sidebar Icons with better spacing -->
     <g id="enhanced-sidebar-tools">
       <!-- File Explorer with context indicator -->
-      <rect x="10" y="65" width="50" height="35" rx="4" fill="#1e1e1e"/>
+      <rect x="10" y="65" width="50" height="35" rx="4" fill="#1e1e1e" />
       <text x="35" y="85" fill="#cccccc" font-family="Inter" font-size="18" text-anchor="middle">📁</text>
-      <circle cx="55" cy="70" r="3" fill="#4ec9b0"/>
-      
+      <circle cx="55" cy="70" r="3" fill="#4ec9b0" />
+
       <!-- Git with context versioning -->
-      <rect x="10" y="110" width="50" height="35" rx="4" fill="#1e1e1e"/>
+      <rect x="10" y="110" width="50" height="35" rx="4" fill="#1e1e1e" />
       <text x="35" y="130" fill="#cccccc" font-family="Inter" font-size="18" text-anchor="middle">🔗</text>
       <text x="55" y="120" fill="#569cd6" font-family="Inter" font-size="8">v2.1</text>
-      
+
       <!-- Context Templates (NEW) -->
-      <rect x="10" y="155" width="50" height="35" rx="4" fill="#4ec9b0" stroke="#66d9b0" stroke-width="2"/>
+      <rect x="10" y="155" width="50" height="35" rx="4" fill="#4ec9b0" stroke="#66d9b0" stroke-width="2" />
       <text x="35" y="175" fill="#ffffff" font-family="Inter" font-size="18" text-anchor="middle">📋</text>
-      
+
       <!-- Knowledge Graph (NEW) -->
-      <rect x="10" y="200" width="50" height="35" rx="4" fill="#1e1e1e"/>
+      <rect x="10" y="200" width="50" height="35" rx="4" fill="#1e1e1e" />
       <text x="35" y="220" fill="#cccccc" font-family="Inter" font-size="18" text-anchor="middle">🕸️</text>
-      
+
       <!-- Collaborative Annotations (NEW) -->
-      <rect x="10" y="245" width="50" height="35" rx="4" fill="#1e1e1e"/>
+      <rect x="10" y="245" width="50" height="35" rx="4" fill="#1e1e1e" />
       <text x="35" y="265" fill="#cccccc" font-family="Inter" font-size="18" text-anchor="middle">💬</text>
-      <circle cx="55" cy="250" r="3" fill="#f44747"/>
-      
+      <circle cx="55" cy="250" r="3" fill="#f44747" />
+
       <!-- Extensions -->
-      <rect x="10" y="290" width="50" height="35" rx="4" fill="#1e1e1e"/>
+      <rect x="10" y="290" width="50" height="35" rx="4" fill="#1e1e1e" />
       <text x="35" y="310" fill="#cccccc" font-family="Inter" font-size="18" text-anchor="middle">🧩</text>
-      
+
       <!-- Settings -->
-      <rect x="10" y="335" width="50" height="35" rx="4" fill="#1e1e1e"/>
+      <rect x="10" y="335" width="50" height="35" rx="4" fill="#1e1e1e" />
       <text x="35" y="355" fill="#cccccc" font-family="Inter" font-size="18" text-anchor="middle">⚙️</text>
     </g>
   </g>
-  
+
   <!-- Enhanced Right Sidebar (70px width - increased) -->
   <g id="enhanced-right-sidebar">
-    <rect x="1370" y="50" width="70" height="650" fill="#252526"/>
-    <line x1="1370" y1="50" x2="1370" y2="700" stroke="#404040" stroke-width="1"/>
-    
+    <rect x="1370" y="50" width="70" height="650" fill="#252526" />
+    <line x1="1370" y1="50" x2="1370" y2="700" stroke="#404040" stroke-width="1" />
+
     <!-- Enhanced AI Tools -->
     <g id="enhanced-ai-tools">
       <!-- Context-Aware AI Chat -->
-      <rect x="1380" y="65" width="50" height="35" rx="4" fill="#569cd6" stroke="#7fb3d3" stroke-width="2"/>
+      <rect x="1380" y="65" width="50" height="35" rx="4" fill="#569cd6" stroke="#7fb3d3" stroke-width="2" />
       <text x="1405" y="85" fill="#ffffff" font-family="Inter" font-size="18" text-anchor="middle">🤖</text>
-      
+
       <!-- Context Impact Analysis (NEW) -->
-      <rect x="1380" y="110" width="50" height="35" rx="4" fill="#1e1e1e"/>
+      <rect x="1380" y="110" width="50" height="35" rx="4" fill="#1e1e1e" />
       <text x="1405" y="130" fill="#cccccc" font-family="Inter" font-size="18" text-anchor="middle">📊</text>
-      <circle cx="1425" cy="115" r="3" fill="#dcdcaa"/>
-      
+      <circle cx="1425" cy="115" r="3" fill="#dcdcaa" />
+
       <!-- Decision Rationale Capture (NEW) -->
-      <rect x="1380" y="155" width="50" height="35" rx="4" fill="#1e1e1e"/>
+      <rect x="1380" y="155" width="50" height="35" rx="4" fill="#1e1e1e" />
       <text x="1405" y="175" fill="#cccccc" font-family="Inter" font-size="18" text-anchor="middle">🎯</text>
-      
+
       <!-- Pattern Recognition -->
-      <rect x="1380" y="200" width="50" height="35" rx="4" fill="#1e1e1e"/>
+      <rect x="1380" y="200" width="50" height="35" rx="4" fill="#1e1e1e" />
       <text x="1405" y="220" fill="#cccccc" font-family="Inter" font-size="18" text-anchor="middle">🔍</text>
-      
+
       <!-- Learning Integration (NEW) -->
-      <rect x="1380" y="245" width="50" height="35" rx="4" fill="#1e1e1e"/>
+      <rect x="1380" y="245" width="50" height="35" rx="4" fill="#1e1e1e" />
       <text x="1405" y="265" fill="#cccccc" font-family="Inter" font-size="18" text-anchor="middle">🧠</text>
-      
+
       <!-- AI Models -->
-      <rect x="1380" y="290" width="50" height="35" rx="4" fill="#1e1e1e"/>
+      <rect x="1380" y="290" width="50" height="35" rx="4" fill="#1e1e1e" />
       <text x="1405" y="310" fill="#cccccc" font-family="Inter" font-size="18" text-anchor="middle">⚡</text>
-      
+
       <!-- Implementation Guidance -->
-      <rect x="1380" y="335" width="50" height="35" rx="4" fill="#1e1e1e"/>
+      <rect x="1380" y="335" width="50" height="35" rx="4" fill="#1e1e1e" />
       <text x="1405" y="355" fill="#cccccc" font-family="Inter" font-size="18" text-anchor="middle">🚀</text>
     </g>
   </g>
-  
+
   <!-- Enhanced Main Content Area (1300px width) -->
   <g id="enhanced-main-content">
-    <rect x="70" y="50" width="1300" height="460" fill="#1e1e1e"/>
-    
+    <rect x="70" y="50" width="1300" height="460" fill="#1e1e1e" />
+
     <!-- Enhanced Content Tabs -->
     <g id="enhanced-content-tabs">
-      <rect x="70" y="50" width="1300" height="40" fill="#2d2d30"/>
-      <line x1="70" y1="90" x2="1370" y2="90" stroke="#404040" stroke-width="1"/>
-      
+      <rect x="70" y="50" width="1300" height="40" fill="#2d2d30" />
+      <line x1="70" y1="90" x2="1370" y2="90" stroke="#404040" stroke-width="1" />
+
       <!-- Context Definition Tab (Active) -->
-      <rect x="85" y="55" width="120" height="30" rx="4" fill="#1e1e1e" stroke="#4ec9b0" stroke-width="2"/>
+      <rect x="85" y="55" width="120" height="30" rx="4" fill="#1e1e1e" stroke="#4ec9b0" stroke-width="2" />
       <text x="145" y="73" fill="#4ec9b0" font-family="Inter" font-size="13" font-weight="600" text-anchor="middle">Context Definition</text>
-      
+
       <!-- Knowledge Mapping Tab (NEW) -->
-      <rect x="215" y="55" width="120" height="30" rx="4" fill="transparent"/>
+      <rect x="215" y="55" width="120" height="30" rx="4" fill="transparent" />
       <text x="275" y="73" fill="#888888" font-family="Inter" font-size="13" text-anchor="middle">Knowledge Mapping</text>
-      
+
       <!-- Validation Dashboard Tab (NEW) -->
-      <rect x="345" y="55" width="130" height="30" rx="4" fill="transparent"/>
+      <rect x="345" y="55" width="130" height="30" rx="4" fill="transparent" />
       <text x="410" y="73" fill="#888888" font-family="Inter" font-size="13" text-anchor="middle">Validation Dashboard</text>
-      
+
       <!-- Implementation Review Tab -->
-      <rect x="485" y="55" width="140" height="30" rx="4" fill="transparent"/>
+      <rect x="485" y="55" width="140" height="30" rx="4" fill="transparent" />
       <text x="555" y="73" fill="#888888" font-family="Inter" font-size="13" text-anchor="middle">Implementation Review</text>
-      
+
       <!-- Tab indicators for completion status -->
-      <circle cx="200" cy="65" r="3" fill="#4ec9b0"/>
-      <circle cx="330" cy="65" r="3" fill="#dcdcaa"/>
-      <circle cx="470" cy="65" r="3" fill="#f44747"/>
-      <circle cx="620" cy="65" r="3" fill="#666666"/>
+      <circle cx="200" cy="65" r="3" fill="#4ec9b0" />
+      <circle cx="330" cy="65" r="3" fill="#dcdcaa" />
+      <circle cx="470" cy="65" r="3" fill="#f44747" />
+      <circle cx="620" cy="65" r="3" fill="#666666" />
     </g>
-    
+
     <!-- Hierarchical Context Editor Workspace -->
     <g id="hierarchical-workspace">
-      <rect x="85" y="105" width="1270" height="390" rx="6" fill="#252526" stroke="#404040" stroke-width="1"/>
-      
+      <rect x="85" y="105" width="1270" height="390" rx="6" fill="#252526" stroke="#404040" stroke-width="1" />
+
       <!-- Three-Panel Layout -->
       <!-- Left Panel: Hierarchical Context Tree (400px) -->
       <g id="context-tree-panel">
-        <rect x="95" y="115" width="400" height="370" rx="4" fill="#1e1e1e" stroke="#333333" stroke-width="1"/>
+        <rect x="95" y="115" width="400" height="370" rx="4" fill="#1e1e1e" stroke="#333333" stroke-width="1" />
         <text x="105" y="135" fill="#4ec9b0" font-family="Inter" font-size="14" font-weight="600">Context Hierarchy</text>
-        <line x1="105" y1="145" x2="485" y2="145" stroke="#333333" stroke-width="1"/>
-        
+        <line x1="105" y1="145" x2="485" y2="145" stroke="#333333" stroke-width="1" />
+
         <!-- Hierarchical Tree Structure -->
         <g id="context-tree-items">
           <!-- Strategic Layer -->
-          <rect x="105" y="155" width="370" height="25" rx="3" fill="#2d2d30"/>
+          <rect x="105" y="155" width="370" height="25" rx="3" fill="#2d2d30" />
           <text x="115" y="170" fill="#4ec9b0" font-family="Inter" font-size="12" font-weight="600">📈 Strategic Layer</text>
-          <circle cx="465" cy="167" r="4" fill="#4ec9b0"/>
-          
+          <circle cx="465" cy="167" r="4" fill="#4ec9b0" />
+
           <!-- Business Objectives (expanded) -->
-          <rect x="125" y="185" width="350" height="20" rx="2" fill="#569cd6" stroke="#7fb3d3" stroke-width="1"/>
+          <rect x="125" y="185" width="350" height="20" rx="2" fill="#569cd6" stroke="#7fb3d3" stroke-width="1" />
           <text x="135" y="197" fill="#ffffff" font-family="Inter" font-size="11" font-weight="500">🎯 Business Objectives</text>
           <text x="455" y="197" fill="#ffffff" font-family="Inter" font-size="9">85%</text>
-          
+
           <!-- Sub-items -->
           <text x="145" y="215" fill="#cccccc" font-family="Inter" font-size="10">• Customer satisfaction improvement</text>
           <text x="145" y="230" fill="#cccccc" font-family="Inter" font-size="10">• API response time optimization</text>
           <text x="145" y="245" fill="#cccccc" font-family="Inter" font-size="10">• Scalability for 10k+ users</text>
-          
+
           <!-- User Outcomes -->
-          <rect x="125" y="255" width="350" height="20" rx="2" fill="#1e1e1e"/>
+          <rect x="125" y="255" width="350" height="20" rx="2" fill="#1e1e1e" />
           <text x="135" y="267" fill="#888888" font-family="Inter" font-size="11">👥 User Outcomes</text>
           <text x="455" y="267" fill="#dcdcaa" font-family="Inter" font-size="9">60%</text>
-          
+
           <!-- Architectural Layer -->
-          <rect x="105" y="285" width="370" height="25" rx="3" fill="#2d2d30"/>
+          <rect x="105" y="285" width="370" height="25" rx="3" fill="#2d2d30" />
           <text x="115" y="300" fill="#dcdcaa" font-family="Inter" font-size="12" font-weight="600">🏗️ Architectural Layer</text>
-          <circle cx="465" cy="297" r="4" fill="#dcdcaa"/>
-          
+          <circle cx="465" cy="297" r="4" fill="#dcdcaa" />
+
           <!-- System Design -->
-          <rect x="125" y="315" width="350" height="20" rx="2" fill="#1e1e1e"/>
+          <rect x="125" y="315" width="350" height="20" rx="2" fill="#1e1e1e" />
           <text x="135" y="327" fill="#888888" font-family="Inter" font-size="11">⚙️ System Design</text>
           <text x="455" y="327" fill="#dcdcaa" font-family="Inter" font-size="9">75%</text>
-          
+
           <!-- Decision Recording -->
-          <rect x="125" y="340" width="350" height="20" rx="2" fill="#1e1e1e"/>
+          <rect x="125" y="340" width="350" height="20" rx="2" fill="#1e1e1e" />
           <text x="135" y="352" fill="#888888" font-family="Inter" font-size="11">📝 Decision Recording</text>
           <text x="455" y="352" fill="#f44747" font-family="Inter" font-size="9">40%</text>
-          
+
           <!-- Constraint Layer -->
-          <rect x="105" y="370" width="370" height="25" rx="3" fill="#2d2d30"/>
+          <rect x="105" y="370" width="370" height="25" rx="3" fill="#2d2d30" />
           <text x="115" y="385" fill="#f44747" font-family="Inter" font-size="12" font-weight="600">🔒 Constraint Layer</text>
-          <circle cx="465" cy="382" r="4" fill="#f44747"/>
-          
+          <circle cx="465" cy="382" r="4" fill="#f44747" />
+
           <!-- Technical Constraints -->
-          <rect x="125" y="400" width="350" height="20" rx="2" fill="#1e1e1e"/>
+          <rect x="125" y="400" width="350" height="20" rx="2" fill="#1e1e1e" />
           <text x="135" y="412" fill="#888888" font-family="Inter" font-size="11">💻 Technical Constraints</text>
           <text x="455" y="412" fill="#4ec9b0" font-family="Inter" font-size="9">90%</text>
-          
+
           <!-- Compliance -->
-          <rect x="125" y="425" width="350" height="20" rx="2" fill="#1e1e1e"/>
+          <rect x="125" y="425" width="350" height="20" rx="2" fill="#1e1e1e" />
           <text x="135" y="437" fill="#888888" font-family="Inter" font-size="11">📋 Compliance</text>
           <text x="455" y="437" fill="#f44747" font-family="Inter" font-size="9">25%</text>
         </g>
       </g>
-      
+
       <!-- Center Panel: Active Context Editor (600px) -->
       <g id="context-editor-panel">
-        <rect x="505" y="115" width="600" height="370" rx="4" fill="#1e1e1e" stroke="#333333" stroke-width="1"/>
+        <rect x="505" y="115" width="600" height="370" rx="4" fill="#1e1e1e" stroke="#333333" stroke-width="1" />
         <text x="515" y="135" fill="#569cd6" font-family="Inter" font-size="14" font-weight="600">Business Objectives Editor</text>
-        <line x1="515" y1="145" x2="1095" y2="145" stroke="#333333" stroke-width="1"/>
-        
+        <line x1="515" y1="145" x2="1095" y2="145" stroke="#333333" stroke-width="1" />
+
         <!-- AI Suggestion Indicator -->
-        <rect x="1050" y="118" width="50" height="20" rx="3" fill="#4ec9b0"/>
+        <rect x="1050" y="118" width="50" height="20" rx="3" fill="#4ec9b0" />
         <text x="1075" y="130" fill="#ffffff" font-family="Inter" font-size="9" text-anchor="middle">AI Active</text>
-        
+
         <!-- Rich Text Editor Area -->
-        <rect x="515" y="155" width="580" height="200" rx="4" fill="#252526" stroke="#404040" stroke-width="1"/>
+        <rect x="515" y="155" width="580" height="200" rx="4" fill="#252526" stroke="#404040" stroke-width="1" />
         <text x="525" y="175" fill="#cccccc" font-family="Inter" font-size="13" font-weight="500">Primary Business Objective:</text>
         <text x="525" y="195" fill="#888888" font-family="Inter" font-size="12">Create a high-performance customer management API that reduces customer</text>
         <text x="525" y="210" fill="#888888" font-family="Inter" font-size="12">service response time by 60% while supporting 10,000+ concurrent users.</text>
-        
+
         <text x="525" y="235" fill="#cccccc" font-family="Inter" font-size="13" font-weight="500">Success Metrics:</text>
-        <text x="525" y="255" fill="#888888" font-family="Inter" font-size="12">• API response time: < 200ms (currently 500ms)</text>
+        <text x="525" y="255" fill="#888888" font-family="Inter" font-size="12">• API response time: &lt; 200ms (currently 500ms)</text>
         <text x="525" y="270" fill="#888888" font-family="Inter" font-size="12">• Concurrent user support: 10,000+ (currently 1,000)</text>
         <text x="525" y="285" fill="#888888" font-family="Inter" font-size="12">• Customer satisfaction score: 95%+ (currently 78%)</text>
         <text x="525" y="300" fill="#888888" font-family="Inter" font-size="12">• System uptime: 99.9% (currently 99.2%)</text>
-        
+
         <text x="525" y="325" fill="#cccccc" font-family="Inter" font-size="13" font-weight="500">ROI Projection:</text>
         <text x="525" y="345" fill="#4ec9b0" font-family="Inter" font-size="12">Estimated 340% ROI over 18 months through improved efficiency</text>
-        
+
         <!-- AI Suggestions Panel -->
-        <rect x="515" y="365" width="580" height="110" rx="4" fill="#0e2f44" stroke="#1e5f74" stroke-width="1"/>
+        <rect x="515" y="365" width="580" height="110" rx="4" fill="#0e2f44" stroke="#1e5f74" stroke-width="1" />
         <text x="525" y="380" fill="#4ec9b0" font-family="Inter" font-size="12" font-weight="600">💡 AI Suggestions:</text>
         <text x="525" y="400" fill="#cccccc" font-family="Inter" font-size="11">• Consider adding customer churn reduction metric (industry standard)</text>
         <text x="525" y="415" fill="#cccccc" font-family="Inter" font-size="11">• Include mobile app integration timeline for better user experience</text>
         <text x="525" y="430" fill="#cccccc" font-family="Inter" font-size="11">• Add compliance requirements for data privacy regulations</text>
         <text x="525" y="445" fill="#cccccc" font-family="Inter" font-size="11">• Consider stakeholder training impact on timeline</text>
-        
-        <rect x="1020" y="455" width="70" height="20" rx="3" fill="#569cd6"/>
+
+        <rect x="1020" y="455" width="70" height="20" rx="3" fill="#569cd6" />
         <text x="1055" y="467" fill="#ffffff" font-family="Inter" font-size="10" text-anchor="middle">Apply All</text>
       </g>
-      
+
       <!-- Right Panel: Validation Dashboard (300px) -->
       <g id="validation-panel">
-        <rect x="1115" y="115" width="240" height="370" rx="4" fill="#1e1e1e" stroke="#333333" stroke-width="1"/>
+        <rect x="1115" y="115" width="240" height="370" rx="4" fill="#1e1e1e" stroke="#333333" stroke-width="1" />
         <text x="1125" y="135" fill="#dcdcaa" font-family="Inter" font-size="14" font-weight="600">Validation Dashboard</text>
-        <line x1="1125" y1="145" x2="1345" y2="145" stroke="#333333" stroke-width="1"/>
-        
+        <line x1="1125" y1="145" x2="1345" y2="145" stroke="#333333" stroke-width="1" />
+
         <!-- Completeness Meter -->
         <text x="1125" y="165" fill="#cccccc" font-family="Inter" font-size="12" font-weight="500">Completeness</text>
-        <rect x="1125" y="170" width="220" height="8" rx="4" fill="#333333"/>
-        <rect x="1125" y="170" width="154" height="8" rx="4" fill="#4ec9b0"/>
+        <rect x="1125" y="170" width="220" height="8" rx="4" fill="#333333" />
+        <rect x="1125" y="170" width="154" height="8" rx="4" fill="#4ec9b0" />
         <text x="1235" y="190" fill="#4ec9b0" font-family="Inter" font-size="11" text-anchor="middle">70%</text>
-        
+
         <!-- Consistency Checker -->
         <text x="1125" y="210" fill="#cccccc" font-family="Inter" font-size="12" font-weight="500">Consistency</text>
-        <rect x="1125" y="215" width="220" height="8" rx="4" fill="#333333"/>
-        <rect x="1125" y="215" width="187" height="8" rx="4" fill="#dcdcaa"/>
+        <rect x="1125" y="215" width="220" height="8" rx="4" fill="#333333" />
+        <rect x="1125" y="215" width="187" height="8" rx="4" fill="#dcdcaa" />
         <text x="1235" y="235" fill="#dcdcaa" font-family="Inter" font-size="11" text-anchor="middle">85%</text>
-        
+
         <!-- Quality Score -->
         <text x="1125" y="255" fill="#cccccc" font-family="Inter" font-size="12" font-weight="500">Quality Score</text>
-        <rect x="1125" y="260" width="220" height="8" rx="4" fill="#333333"/>
-        <rect x="1125" y="260" width="165" height="8" rx="4" fill="#569cd6"/>
+        <rect x="1125" y="260" width="220" height="8" rx="4" fill="#333333" />
+        <rect x="1125" y="260" width="165" height="8" rx="4" fill="#569cd6" />
         <text x="1235" y="280" fill="#569cd6" font-family="Inter" font-size="11" text-anchor="middle">75%</text>
-        
+
         <!-- Stakeholder Alignment -->
         <text x="1125" y="300" fill="#cccccc" font-family="Inter" font-size="12" font-weight="500">Stakeholder Alignment</text>
-        <circle cx="1145" cy="320" r="8" fill="#4ec9b0"/>
-        <circle cx="1170" cy="320" r="8" fill="#dcdcaa"/>
-        <circle cx="1195" cy="320" r="8" fill="#f44747"/>
+        <circle cx="1145" cy="320" r="8" fill="#4ec9b0" />
+        <circle cx="1170" cy="320" r="8" fill="#dcdcaa" />
+        <circle cx="1195" cy="320" r="8" fill="#f44747" />
         <text x="1125" y="340" fill="#888888" font-family="Inter" font-size="10">Dev Lead: Approved</text>
         <text x="1125" y="355" fill="#888888" font-family="Inter" font-size="10">Product: Review</text>
         <text x="1125" y="370" fill="#888888" font-family="Inter" font-size="10">Security: Pending</text>
-        
+
         <!-- Implementation Readiness -->
         <text x="1125" y="395" fill="#cccccc" font-family="Inter" font-size="12" font-weight="500">Implementation Ready</text>
-        <rect x="1125" y="405" width="220" height="25" rx="4" fill="#0e639c"/>
+        <rect x="1125" y="405" width="220" height="25" rx="4" fill="#0e639c" />
         <text x="1235" y="420" fill="#ffffff" font-family="Inter" font-size="12" text-anchor="middle">🤖 Generate Code</text>
-        
+
         <!-- Validation Issues -->
         <text x="1125" y="445" fill="#f44747" font-family="Inter" font-size="11" font-weight="500">⚠️ Issues (3)</text>
         <text x="1125" y="460" fill="#f44747" font-family="Inter" font-size="9">• Missing compliance section</text>
@@ -300,279 +307,122 @@
       </g>
     </g>
   </g>
-  
+
   <!-- Enhanced Bottom Status Panel (1300px x 200px) -->
   <g id="enhanced-status-panel">
-    <rect x="70" y="700" width="1300" height="200" fill="#252526"/>
-    <line x1="70" y1="700" x2="1370" y2="700" stroke="#404040" stroke-width="1"/>
-    
+    <rect x="70" y="700" width="1300" height="200" fill="#252526" />
+    <line x1="70" y1="700" x2="1370" y2="700" stroke="#404040" stroke-width="1" />
+
     <!-- Enhanced Panel Tabs -->
     <g id="enhanced-panel-tabs">
-      <rect x="70" y="700" width="1300" height="35" fill="#2d2d30"/>
-      <line x1="70" y1="735" x2="1370" y2="735" stroke="#404040" stroke-width="1"/>
-      
+      <rect x="70" y="700" width="1300" height="35" fill="#2d2d30" />
+      <line x1="70" y1="735" x2="1370" y2="735" stroke="#404040" stroke-width="1" />
+
       <!-- Context Evolution Log Tab (Active) -->
-      <rect x="85" y="705" width="130" height="25" rx="3" fill="#1e1e1e" stroke="#4ec9b0" stroke-width="1"/>
+      <rect x="85" y="705" width="130" height="25" rx="3" fill="#1e1e1e" stroke="#4ec9b0" stroke-width="1" />
       <text x="150" y="720" fill="#4ec9b0" font-family="Inter" font-size="12" font-weight="500" text-anchor="middle">Context Evolution</text>
-      
+
       <!-- AI Learning Insights Tab -->
-      <rect x="225" y="705" width="120" height="25" rx="3" fill="transparent"/>
+      <rect x="225" y="705" width="120" height="25" rx="3" fill="transparent" />
       <text x="285" y="720" fill="#888888" font-family="Inter" font-size="12" text-anchor="middle">AI Learning</text>
-      
+
       <!-- Stakeholder Activity Tab -->
-      <rect x="355" y="705" width="130" height="25" rx="3" fill="transparent"/>
+      <rect x="355" y="705" width="130" height="25" rx="3" fill="transparent" />
       <text x="420" y="720" fill="#888888" font-family="Inter" font-size="12" text-anchor="middle">Stakeholder Activity</text>
-      
+
       <!-- Implementation Traceability Tab -->
-      <rect x="495" y="705" width="150" height="25" rx="3" fill="transparent"/>
+      <rect x="495" y="705" width="150" height="25" rx="3" fill="transparent" />
       <text x="570" y="720" fill="#888888" font-family="Inter" font-size="12" text-anchor="middle">Implementation Trace</text>
-      
+
       <!-- New indicators -->
-      <circle cx="210" cy="717" r="3" fill="#4ec9b0"/>
-      <circle cx="340" cy="717" r="3" fill="#dcdcaa"/>
-      <circle cx="480" cy="717" r="3" fill="#569cd6"/>
-      <circle cx="640" cy="717" r="3" fill="#f44747"/>
+      <circle cx="210" cy="717" r="3" fill="#4ec9b0" />
+      <circle cx="340" cy="717" r="3" fill="#dcdcaa" />
+      <circle cx="480" cy="717" r="3" fill="#569cd6" />
+      <circle cx="640" cy="717" r="3" fill="#f44747" />
     </g>
-    
+
     <!-- Context Evolution Timeline -->
     <g id="context-evolution-content">
-      <rect x="85" y="745" width="1270" height="145" rx="4" fill="#1e1e1e" stroke="#333333" stroke-width="1"/>
-      
+      <rect x="85" y="745" width="1270" height="145" rx="4" fill="#1e1e1e" stroke="#333333" stroke-width="1" />
+
       <!-- Timeline entries -->
       <g id="timeline-entries">
         <text x="95" y="765" fill="#4ec9b0" font-family="Inter" font-size="11" font-weight="600">📈 Recent Context Changes</text>
-        
+
         <!-- Entry 1 -->
-        <circle cx="105" cy="785" r="4" fill="#4ec9b0"/>
-        <line x1="109" y1="785" x2="200" y2="785" stroke="#4ec9b0" stroke-width="2"/>
+        <circle cx="105" cy="785" r="4" fill="#4ec9b0" />
+        <line x1="109" y1="785" x2="200" y2="785" stroke="#4ec9b0" stroke-width="2" />
         <text x="210" y="780" fill="#cccccc" font-family="Inter" font-size="10" font-weight="500">10:30 AM</text>
         <text x="210" y="792" fill="#888888" font-family="Inter" font-size="10">Updated performance requirements - Response time target reduced to 200ms</text>
         <text x="750" y="792" fill="#569cd6" font-family="Inter" font-size="9">Impact: High | Affected: 3 components</text>
-        
+
         <!-- Entry 2 -->
-        <circle cx="105" cy="810" r="4" fill="#dcdcaa"/>
-        <line x1="109" y1="810" x2="200" y2="810" stroke="#dcdcaa" stroke-width="2"/>
+        <circle cx="105" cy="810" r="4" fill="#dcdcaa" />
+        <line x1="109" y1="810" x2="200" y2="810" stroke="#dcdcaa" stroke-width="2" />
         <text x="210" y="805" fill="#cccccc" font-family="Inter" font-size="10" font-weight="500">09:45 AM</text>
         <text x="210" y="817" fill="#888888" font-family="Inter" font-size="10">Sarah Chen added compliance requirements for GDPR data handling</text>
         <text x="750" y="817" fill="#dcdcaa" font-family="Inter" font-size="9">Impact: Medium | Review: Pending</text>
-        
+
         <!-- Entry 3 -->
-        <circle cx="105" cy="835" r="4" fill="#569cd6"/>
-        <line x1="109" y1="835" x2="200" y2="835" stroke="#569cd6" stroke-width="2"/>
+        <circle cx="105" cy="835" r="4" fill="#569cd6" />
+        <line x1="109" y1="835" x2="200" y2="835" stroke="#569cd6" stroke-width="2" />
         <text x="210" y="830" fill="#cccccc" font-family="Inter" font-size="10" font-weight="500">09:15 AM</text>
         <text x="210" y="842" fill="#888888" font-family="Inter" font-size="10">AI suggested architectural pattern: CQRS for read/write optimization</text>
         <text x="750" y="842" fill="#4ec9b0" font-family="Inter" font-size="9">Impact: Low | Status: Approved</text>
-        
+
         <!-- Entry 4 -->
-        <circle cx="105" cy="860" r="4" fill="#f44747"/>
-        <line x1="109" y1="860" x2="200" y2="860" stroke="#f44747" stroke-width="2"/>
+        <circle cx="105" cy="860" r="4" fill="#f44747" />
+        <line x1="109" y1="860" x2="200" y2="860" stroke="#f44747" stroke-width="2" />
         <text x="210" y="855" fill="#cccccc" font-family="Inter" font-size="10" font-weight="500">08:30 AM</text>
         <text x="210" y="867" fill="#888888" font-family="Inter" font-size="10">Risk identified: Database scalability concerns flagged by AI analysis</text>
         <text x="750" y="867" fill="#f44747" font-family="Inter" font-size="9">Impact: Critical | Action: Required</text>
       </g>
-      
+
       <!-- Change Impact Visualization -->
       <g id="impact-visualization">
         <text x="1000" y="765" fill="#dcdcaa" font-family="Inter" font-size="11" font-weight="600">📊 Change Impact</text>
-        <rect x="1000" y="775" width="350" height="110" rx="4" fill="#252526" stroke="#404040" stroke-width="1"/>
-        
+        <rect x="1000" y="775" width="350" height="110" rx="4" fill="#252526" stroke="#404040" stroke-width="1" />
+
         <!-- Impact Network Graph -->
-        <circle cx="1050" cy="810" r="12" fill="#4ec9b0"/>
+        <circle cx="1050" cy="810" r="12" fill="#4ec9b0" />
         <text x="1050" y="815" fill="#ffffff" font-family="Inter" font-size="8" text-anchor="middle">API</text>
-        
-        <circle cx="1120" cy="790" r="8" fill="#569cd6"/>
+
+        <circle cx="1120" cy="790" r="8" fill="#569cd6" />
         <text x="1120" y="794" fill="#ffffff" font-family="Inter" font-size="7" text-anchor="middle">DB</text>
-        
-        <circle cx="1120" cy="830" r="8" fill="#dcdcaa"/>
+
+        <circle cx="1120" cy="830" r="8" fill="#dcdcaa" />
         <text x="1120" y="834" fill="#ffffff" font-family="Inter" font-size="7" text-anchor="middle">UI</text>
-        
-        <circle cx="1180" cy="810" r="6" fill="#f44747"/>
+
+        <circle cx="1180" cy="810" r="6" fill="#f44747" />
         <text x="1180" y="814" fill="#ffffff" font-family="Inter" font-size="6" text-anchor="middle">Test</text>
-        
+
         <!-- Connection lines -->
-        <line x1="1062" y1="810" x2="1108" y2="790" stroke="#4ec9b0" stroke-width="2"/>
-        <line x1="1062" y1="810" x2="1108" y2="830" stroke="#4ec9b0" stroke-width="2"/>
-        <line x1="1128" y1="790" x2="1174" y2="810" stroke="#569cd6" stroke-width="1"/>
-        <line x1="1128" y1="830" x2="1174" y2="810" stroke="#dcdcaa" stroke-width="1"/>
-        
+        <line x1="1062" y1="810" x2="1108" y2="790" stroke="#4ec9b0" stroke-width="2" />
+        <line x1="1062" y1="810" x2="1108" y2="830" stroke="#4ec9b0" stroke-width="2" />
+        <line x1="1128" y1="790" x2="1174" y2="810" stroke="#569cd6" stroke-width="1" />
+        <line x1="1128" y1="830" x2="1174" y2="810" stroke="#dcdcaa" stroke-width="1" />
+
         <!-- Impact Legend -->
-        <circle cx="1220" cy="790" r="3" fill="#4ec9b0"/>
+        <circle cx="1220" cy="790" r="3" fill="#4ec9b0" />
         <text x="1230" y="794" fill="#888888" font-family="Inter" font-size="9">High Impact</text>
-        <circle cx="1220" cy="805" r="3" fill="#dcdcaa"/>
+        <circle cx="1220" cy="805" r="3" fill="#dcdcaa" />
         <text x="1230" y="809" fill="#888888" font-family="Inter" font-size="9">Medium Impact</text>
-        <circle cx="1220" cy="820" r="3" fill="#f44747"/>
+        <circle cx="1220" cy="820" r="3" fill="#f44747" />
         <text x="1230" y="824" fill="#888888" font-family="Inter" font-size="9">Critical Risk</text>
-        
+
         <!-- Rollback Options -->
-        <rect x="1000" y="850" width="80" height="20" rx="3" fill="#333333"/>
+        <rect x="1000" y="850" width="80" height="20" rx="3" fill="#333333" />
         <text x="1040" y="862" fill="#cccccc" font-family="Inter" font-size="9" text-anchor="middle">🔄 Rollback</text>
-        
-        <rect x="1090" y="850" width="100" height="20" rx="3" fill="#569cd6"/>
+
+        <rect x="1090" y="850" width="100" height="20" rx="3" fill="#569cd6" />
         <text x="1140" y="862" fill="#ffffff" font-family="Inter" font-size="9" text-anchor="middle">💾 Create Branch</text>
-        
-        <rect x="1200" y="850" width="80" height="20" rx="3" fill="#4ec9b0"/>
+
+        <rect x="1200" y="850" width="80" height="20" rx="3" fill="#4ec9b0" />
         <text x="1240" y="862" fill="#ffffff" font-family="Inter" font-size="9" text-anchor="middle">✅ Commit</text>
       </g>
     </g>
   </g>
-  
-  <!-- Enhanced Context Templates Offcanvas (350px wide) -->
-  <g id="context-templates-offcanvas" opacity="0.95">
-    <rect x="70" y="50" width="350" height="650" fill="#252526" stroke="#4ec9b0" stroke-width="2"/>
-    <filter id="templatePanelShadow">
-      <feDropShadow dx="6" dy="0" stdDeviation="12" flood-color="#000000" flood-opacity="0.4"/>
-    </filter>
-    <rect x="70" y="50" width="350" height="650" fill="#252526" stroke="#4ec9b0" stroke-width="2" filter="url(#templatePanelShadow)"/>
-    
-    <!-- Panel Header -->
-    <rect x="70" y="50" width="350" height="45" fill="#4ec9b0"/>
-    <text x="85" y="77" fill="#ffffff" font-family="Inter" font-size="16" font-weight="700">📋 Context Templates</text>
-    <text x="395" y="77" fill="#ffffff" font-family="Inter" font-size="18" text-anchor="middle">×</text>
-    
-    <!-- Search and Filter -->
-    <rect x="85" y="110" width="320" height="30" rx="4" fill="#1e1e1e" stroke="#404040" stroke-width="1"/>
-    <text x="95" y="128" fill="#666666" font-family="Inter" font-size="12">🔍 Search templates...</text>
-    
-    <!-- Template Categories -->
-    <g id="template-categories">
-      <text x="85" y="165" fill="#4ec9b0" font-family="Inter" font-size="14" font-weight="600">Industry Templates</text>
-      
-      <!-- FinTech Template -->
-      <rect x="85" y="175" width="320" height="60" rx="4" fill="#1e1e1e" stroke="#569cd6" stroke-width="1"/>
-      <text x="95" y="195" fill="#569cd6" font-family="Inter" font-size="13" font-weight="600">🏦 FinTech API Platform</text>
-      <text x="95" y="210" fill="#888888" font-family="Inter" font-size="11">Complete context for financial services APIs with compliance</text>
-      <text x="95" y="225" fill="#888888" font-family="Inter" font-size="11">Used in 12 projects • 95% success rate</text>
-      
-      <!-- E-Commerce Template -->
-      <rect x="85" y="245" width="320" height="60" rx="4" fill="#1e1e1e" stroke="#dcdcaa" stroke-width="1"/>
-      <text x="95" y="265" fill="#dcdcaa" font-family="Inter" font-size="13" font-weight="600">🛒 E-Commerce Platform</text>
-      <text x="95" y="280" fill="#888888" font-family="Inter" font-size="11">Customer management, inventory, and order processing</text>
-      <text x="95" y="295" fill="#888888" font-family="Inter" font-size="11">Used in 8 projects • 87% success rate</text>
-      
-      <text x="85" y="325" fill="#4ec9b0" font-family="Inter" font-size="14" font-weight="600">Architecture Templates</text>
-      
-      <!-- Microservices Template -->
-      <rect x="85" y="335" width="320" height="60" rx="4" fill="#1e1e1e" stroke="#f44747" stroke-width="1"/>
-      <text x="95" y="355" fill="#f44747" font-family="Inter" font-size="13" font-weight="600">🏗️ Microservices Architecture</text>
-      <text x="95" y="370" fill="#888888" font-family="Inter" font-size="11">Event-driven microservices with CQRS pattern</text>
-      <text x="95" y="385" fill="#888888" font-family="Inter" font-size="11">Used in 15 projects • 92% success rate</text>
-      
-      <!-- Monolith Template -->
-      <rect x="85" y="405" width="320" height="60" rx="4" fill="#1e1e1e" stroke="#cccccc" stroke-width="1"/>
-      <text x="95" y="425" fill="#cccccc" font-family="Inter" font-size="13" font-weight="600">🏢 Modular Monolith</text>
-      <text x="95" y="440" fill="#888888" font-family="Inter" font-size="11">Clean architecture with domain-driven design</text>
-      <text x="95" y="455" fill="#888888" font-family="Inter" font-size="11">Used in 22 projects • 89% success rate</text>
-      
-      <text x="85" y="485" fill="#4ec9b0" font-family="Inter" font-size="14" font-weight="600">Team Templates</text>
-      
-      <!-- Custom Template -->
-      <rect x="85" y="495" width="320" height="80" rx="4" fill="#0e2f44" stroke="#1e5f74" stroke-width="1"/>
-      <text x="95" y="515" fill="#4ec9b0" font-family="Inter" font-size="13" font-weight="600">⭐ Team Best Practice</text>
-      <text x="95" y="530" fill="#888888" font-family="Inter" font-size="11">Your organization's proven context patterns</text>
-      <text x="95" y="545" fill="#888888" font-family="Inter" font-size="11">Includes: Security requirements, coding standards,</text>
-      <text x="95" y="560" fill="#888888" font-family="Inter" font-size="11">deployment pipelines, and quality gates</text>
-      <text x="95" y="575" fill="#4ec9b0" font-family="Inter" font-size="10">Updated 2 days ago • 98% team adoption</text>
-    </g>
-    
-    <!-- Action Buttons -->
-    <rect x="85" y="595" width="100" height="30" rx="4" fill="#569cd6"/>
-    <text x="135" y="613" fill="#ffffff" font-family="Inter" font-size="12" text-anchor="middle">📥 Use Template</text>
-    
-    <rect x="195" y="595" width="100" height="30" rx="4" fill="#333333"/>
-    <text x="245" y="613" fill="#cccccc" font-family="Inter" font-size="12" text-anchor="middle">👁️ Preview</text>
-    
-    <rect x="305" y="595" width="100" height="30" rx="4" fill="#4ec9b0"/>
-    <text x="355" y="613" fill="#ffffff" font-family="Inter" font-size="12" text-anchor="middle">➕ Create New</text>
-    
-    <!-- Template Analytics -->
-    <rect x="85" y="640" width="320" height="50" rx="4" fill="#252526" stroke="#333333" stroke-width="1"/>
-    <text x="95" y="658" fill="#dcdcaa" font-family="Inter" font-size="11" font-weight="600">📊 Template Analytics</text>
-    <text x="95" y="675" fill="#888888" font-family="Inter" font-size="10">Avg. implementation time: 4.2 days (-30% vs custom)</text>
-    <text x="95" y="688" fill="#888888" font-family="Inter" font-size="10">Success rate: 91% | Quality score: 8.7/10</text>
-  </g>
-  
-  <!-- Enhanced AI Chat Panel (320px wide) -->
-  <g id="enhanced-ai-chat-panel" opacity="0.95">
-    <rect x="1050" y="50" width="320" height="650" fill="#252526" stroke="#569cd6" stroke-width="2" filter="url(#templatePanelShadow)"/>
-    
-    <!-- Panel Header with Context Awareness -->
-    <rect x="1050" y="50" width="320" height="45" fill="#569cd6"/>
-    <text x="1065" y="77" fill="#ffffff" font-family="Inter" font-size="16" font-weight="700">🤖 Context AI Assistant</text>
-    <circle cx="1340" cy="67" r="8" fill="#4ec9b0"/>
-    <text x="1340" y="71" fill="#ffffff" font-family="Inter" font-size="8" text-anchor="middle">AI</text>
-    <text x="1355" y="77" fill="#ffffff" font-family="Inter" font-size="18" text-anchor="middle">×</text>
-    
-    <!-- Context Awareness Indicator -->
-    <rect x="1065" y="105" width="290" height="25" rx="4" fill="#0e2f44" stroke="#1e5f74" stroke-width="1"/>
-    <text x="1075" y="121" fill="#4ec9b0" font-family="Inter" font-size="11" font-weight="600">🎯 Context: Business Objectives | Strategic Layer</text>
-    
-    <!-- AI Mode Selector -->
-    <g id="ai-mode-selector">
-      <rect x="1065" y="140" width="85" height="20" rx="3" fill="#569cd6"/>
-      <text x="1107" y="152" fill="#ffffff" font-family="Inter" font-size="9" text-anchor="middle">Analysis</text>
-      
-      <rect x="1155" y="140" width="85" height="20" rx="3" fill="#333333"/>
-      <text x="1197" y="152" fill="#cccccc" font-family="Inter" font-size="9" text-anchor="middle">Generation</text>
-      
-      <rect x="1245" y="140" width="85" height="20" rx="3" fill="#333333"/>
-      <text x="1287" y="152" fill="#cccccc" font-family="Inter" font-size="9" text-anchor="middle">Review</text>
-    </g>
-    
-    <!-- Enhanced Chat Messages -->
-    <g id="enhanced-chat-messages">
-      <!-- AI Context Analysis -->
-      <rect x="1065" y="175" width="290" height="85" rx="4" fill="#0e2f44"/>
-      <text x="1075" y="192" fill="#4ec9b0" font-family="Inter" font-size="12" font-weight="600">AI Context Analysis:</text>
-      <text x="1075" y="210" fill="#cccccc" font-family="Inter" font-size="11">Your business objectives are well-defined with quantifiable</text>
-      <text x="1075" y="225" fill="#cccccc" font-family="Inter" font-size="11">metrics. I've identified 3 enhancement opportunities:</text>
-      <text x="1075" y="240" fill="#cccccc" font-family="Inter" font-size="11">• Add customer churn reduction target</text>
-      <text x="1075" y="255" fill="#cccccc" font-family="Inter" font-size="11">• Include mobile responsiveness metrics</text>
-      
-      <!-- User Query -->
-      <rect x="1065" y="270" width="290" height="45" rx="4" fill="#1e1e1e"/>
-      <text x="1075" y="287" fill="#ffffff" font-family="Inter" font-size="12" font-weight="600">You:</text>
-      <text x="1075" y="305" fill="#cccccc" font-family="Inter" font-size="11">How does this align with our architectural constraints?</text>
-      
-      <!-- AI Strategic Response -->
-      <rect x="1065" y="325" width="290" height="120" rx="4" fill="#0e2f44"/>
-      <text x="1075" y="342" fill="#4ec9b0" font-family="Inter" font-size="12" font-weight="600">AI Strategic Guidance:</text>
-      <text x="1075" y="360" fill="#cccccc" font-family="Inter" font-size="11">Excellent question! Your performance targets require:</text>
-      <text x="1075" y="375" fill="#cccccc" font-family="Inter" font-size="11">• Database optimization (affects 60% of API calls)</text>
-      <text x="1075" y="390" fill="#cccccc" font-family="Inter" font-size="11">• Caching layer implementation (Redis recommended)</text>
-      <text x="1075" y="405" fill="#cccccc" font-family="Inter" font-size="11">• Load balancing strategy for 10k+ users</text>
-      <text x="1075" y="420" fill="#cccccc" font-family="Inter" font-size="11">• Consider CQRS pattern for read/write separation</text>
-      <text x="1075" y="435" fill="#4ec9b0" font-family="Inter" font-size="10">📊 Impact analysis suggests 85% feasibility</text>
-      
-      <!-- Implementation Suggestion -->
-      <rect x="1065" y="455" width="290" height="90" rx="4" fill="#1e1e1e"/>
-      <text x="1075" y="472" fill="#ffffff" font-family="Inter" font-size="12" font-weight="600">You:</text>
-      <text x="1075" y="490" fill="#cccccc" font-family="Inter" font-size="11">Generate the architectural decision record for CQRS</text>
-      
-      <rect x="1065" y="470" width="290" height="75" rx="4" fill="#0e2f44"/>
-      <text x="1075" y="502" fill="#4ec9b0" font-family="Inter" font-size="12" font-weight="600">AI Decision Support:</text>
-      <text x="1075" y="520" fill="#cccccc" font-family="Inter" font-size="11">I've drafted the ADR including context, decision rationale,</text>
-      <text x="1075" y="535" fill="#cccccc" font-family="Inter" font-size="11">consequences, and implementation strategy. Would you</text>
-      <text x="1075" y="550" fill="#cccccc" font-family="Inter" font-size="11">like me to add it to your architectural layer?</text>
-      
-      <!-- Pattern Recognition Alert -->
-      <rect x="1065" y="555" width="290" height="65" rx="4" fill="#2d1f0e" stroke="#f4a460" stroke-width="1"/>
-      <text x="1075" y="572" fill="#f4a460" font-family="Inter" font-size="12" font-weight="600">🔍 Pattern Recognition:</text>
-      <text x="1075" y="590" fill="#cccccc" font-family="Inter" font-size="11">Similar context found in CustomerPortal project (92%</text>
-      <text x="1075" y="605" fill="#cccccc" font-family="Inter" font-size="11">match). Successful implementation took 3.2 weeks.</text>
-      
-      <!-- AI Recommendation Actions -->
-      <rect x="1065" y="630" width="135" height="25" rx="3" fill="#4ec9b0"/>
-      <text x="1132" y="645" fill="#ffffff" font-family="Inter" font-size="10" text-anchor="middle">📝 Add to Context</text>
-      
-      <rect x="1210" y="630" width="135" height="25" rx="3" fill="#569cd6"/>
-      <text x="1277" y="645" fill="#ffffff" font-family="Inter" font-size="10" text-anchor="middle">🚀 Generate Code</text>
-    </g>
-    
-    <!-- Enhanced Chat Input -->
-    <rect x="1065" y="665" width="290" height="30" rx="4" fill="#1e1e1e" stroke="#404040" stroke-width="1"/>
-    <text x="1075" y="683" fill="#666666" font-family="Inter" font-size="11">Ask about context validation, patterns, or implementation...</text>
-  </g>
-  
+
   <!-- Measurement Annotations -->
   <g id="enhanced-annotations" opacity="0.2">
     <text x="720" y="30" fill="#4ec9b0" font-family="Inter" font-size="10" text-anchor="middle">1440px</text>
