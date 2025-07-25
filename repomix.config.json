@@ -1,0 +1,80 @@
+{
+  "$schema": "https://repomix.com/schemas/latest/schema.json",
+  "input": {
+    "maxFileSize": 52428800
+  },
+  "output": {
+    "filePath": "repomix-output.xml",
+    "style": "xml",
+    "parsableStyle": true,
+    "fileSummary": true,
+    "directoryStructure": true,
+    "files": true,
+    "removeComments": false,
+    "removeEmptyLines": false,
+    "compress": false,
+    "topFilesLength": 20,
+    "showLineNumbers": true,
+    "truncateBase64": false,
+    "copyToClipboard": false,
+    "git": {
+      "sortByChanges": true,
+      "sortByChangesMaxCommits": 100,
+      "includeDiffs": false
+    }
+  },
+  "include": [
+    "**/*.cs",
+    "**/*.csproj",
+    "**/*.sln",
+    "**/*.json",
+    "**/*.xml",
+    "**/*.config",
+    "**/*.props",
+    "**/*.targets",
+    "**/*.md",
+    "**/*.yml",
+    "**/*.yaml",
+    "**/Dockerfile",
+    "**/.dockerignore",
+    "**/*.cshtml",
+    "**/*.razor",
+    "**/appsettings.json",
+    "**/appsettings.Development.json"
+  ],
+  "ignore": {
+    "useGitignore": true,
+    "useDefaultPatterns": true,
+    "customPatterns": [
+      "**/bin/**",
+      "**/obj/**",
+      "**/packages/**",
+      "**/.vs/**",
+      "**/.idea/**",
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/out/**",
+      "**/publish/**",
+      "**/TestResults/**",
+      "**/coverage/**",
+      "**/*.user",
+      "**/*.suo",
+      "**/*.cache",
+      "**/*.log",
+      "**/*.tmp",
+      "**/*.temp",
+      "**/repomix-output.*",
+      "**/.sonarqube/**",
+      "**/artifacts/**",
+      "**/_ReSharper*/**",
+      "**/*.DotSettings.user"
+    ]
+  },
+  "security": {
+    "enableSecurityCheck": true
+  },
+  "tokenCount": {
+    "encoding": "o200k_base"
+  }
+}
