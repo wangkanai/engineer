@@ -1,0 +1,190 @@
+<svg viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="contextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D9488;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#DC2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EA580C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="800" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="80" fill="url(#headerGrad)"/>
+  <text x="500" y="45" text-anchor="middle" fill="white" font-size="24" font-weight="bold">UX/UI Frame Diagram Design in Context Engineering</text>
+  
+  <!-- Context Engineer Section -->
+  <rect x="50" y="120" width="400" height="300" fill="url(#contextGrad)" opacity="0.1" rx="10"/>
+  <rect x="50" y="120" width="400" height="40" fill="url(#contextGrad)" rx="10"/>
+  <text x="250" y="145" text-anchor="middle" fill="white" font-weight="bold" font-size="16">Context Engineer (Human)</text>
+  
+  <!-- Conceptual Design -->
+  <rect x="70" y="180" width="160" height="80" fill="white" stroke="#059669" stroke-width="2" rx="5"/>
+  <text x="150" y="200" text-anchor="middle" font-size="12" font-weight="bold">Conceptual Design</text>
+  <text x="150" y="220" text-anchor="middle" font-size="10">• User Mental Models</text>
+  <text x="150" y="235" text-anchor="middle" font-size="10">• Information Architecture</text>
+  <text x="150" y="250" text-anchor="middle" font-size="10">• Content Strategy</text>
+  
+  <!-- Frame Diagrams -->
+  <rect x="260" y="180" width="160" height="80" fill="white" stroke="#059669" stroke-width="2" rx="5"/>
+  <text x="340" y="200" text-anchor="middle" font-size="12" font-weight="bold">Frame Diagrams</text>
+  <text x="340" y="220" text-anchor="middle" font-size="10">• Wireframes</text>
+  <text x="340" y="235" text-anchor="middle" font-size="10">• User Flow Diagrams</text>
+  <text x="340" y="250" text-anchor="middle" font-size="10">• Task Flow Maps</text>
+  
+  <!-- User Research -->
+  <rect x="70" y="280" width="160" height="80" fill="white" stroke="#059669" stroke-width="2" rx="5"/>
+  <text x="150" y="300" text-anchor="middle" font-size="12" font-weight="bold">User Research</text>
+  <text x="150" y="320" text-anchor="middle" font-size="10">• User Personas</text>
+  <text x="150" y="335" text-anchor="middle" font-size="10">• Journey Maps</text>
+  <text x="150" y="350" text-anchor="middle" font-size="10">• Pain Points Analysis</text>
+  
+  <!-- Strategic Requirements -->
+  <rect x="260" y="280" width="160" height="80" fill="white" stroke="#059669" stroke-width="2" rx="5"/>
+  <text x="340" y="300" text-anchor="middle" font-size="12" font-weight="bold">Strategic Requirements</text>
+  <text x="340" y="320" text-anchor="middle" font-size="10">• Business Goals</text>
+  <text x="340" y="335" text-anchor="middle" font-size="10">• Success Metrics</text>
+  <text x="340" y="350" text-anchor="middle" font-size="10">• Design Constraints</text>
+  
+  <!-- AI Implementation Section -->
+  <rect x="550" y="120" width="400" height="300" fill="url(#aiGrad)" opacity="0.1" rx="10"/>
+  <rect x="550" y="120" width="400" height="40" fill="url(#aiGrad)" rx="10"/>
+  <text x="750" y="145" text-anchor="middle" fill="white" font-weight="bold" font-size="16">AI Implementation Layer</text>
+  
+  <!-- Component Generation -->
+  <rect x="570" y="180" width="160" height="80" fill="white" stroke="#DC2626" stroke-width="2" rx="5"/>
+  <text x="650" y="200" text-anchor="middle" font-size="12" font-weight="bold">UI Component Gen</text>
+  <text x="650" y="220" text-anchor="middle" font-size="10">• React/Vue Components</text>
+  <text x="650" y="235" text-anchor="middle" font-size="10">• CSS/Styling</text>
+  <text x="650" y="250" text-anchor="middle" font-size="10">• Responsive Layout</text>
+  
+  <!-- Prototype Generation -->
+  <rect x="760" y="180" width="160" height="80" fill="white" stroke="#DC2626" stroke-width="2" rx="5"/>
+  <text x="840" y="200" text-anchor="middle" font-size="12" font-weight="bold">Prototype Gen</text>
+  <text x="840" y="220" text-anchor="middle" font-size="10">• Interactive Mockups</text>
+  <text x="840" y="235" text-anchor="middle" font-size="10">• Animation Code</text>
+  <text x="840" y="250" text-anchor="middle" font-size="10">• State Management</text>
+  
+  <!-- Code Implementation -->
+  <rect x="570" y="280" width="160" height="80" fill="white" stroke="#DC2626" stroke-width="2" rx="5"/>
+  <text x="650" y="300" text-anchor="middle" font-size="12" font-weight="bold">Code Implementation</text>
+  <text x="650" y="320" text-anchor="middle" font-size="10">• HTML Structure</text>
+  <text x="650" y="335" text-anchor="middle" font-size="10">• JavaScript Logic</text>
+  <text x="650" y="350" text-anchor="middle" font-size="10">• API Integration</text>
+  
+  <!-- Testing & Validation -->
+  <rect x="760" y="280" width="160" height="80" fill="white" stroke="#DC2626" stroke-width="2" rx="5"/>
+  <text x="840" y="300" text-anchor="middle" font-size="12" font-weight="bold">Testing & Validation</text>
+  <text x="840" y="320" text-anchor="middle" font-size="10">• Accessibility Tests</text>
+  <text x="840" y="335" text-anchor="middle" font-size="10">• Cross-browser Tests</text>
+  <text x="840" y="350" text-anchor="middle" font-size="10">• Performance Tests</text>
+  
+  <!-- Workflow Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6B7280" />
+    </marker>
+  </defs>
+  
+  <!-- Context to AI arrows -->
+  <line x1="450" y1="220" x2="570" y2="220" stroke="#6B7280" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="450" y1="320" x2="570" y2="320" stroke="#6B7280" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Feedback Loop -->
+  <path d="M 840 380 Q 900 400 900 450 Q 900 500 500 520 Q 100 540 100 450 Q 100 400 150 380" 
+        stroke="#7C3AED" stroke-width="3" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  <text x="500" y="540" text-anchor="middle" font-size="12" fill="#7C3AED" font-weight="bold">Review & Iteration Loop</text>
+  
+  <!-- Frame Types -->
+  <rect x="50" y="480" width="900" height="280" fill="white" stroke="#E5E7EB" stroke-width="2" rx="10"/>
+  <rect x="50" y="480" width="900" height="40" fill="#F3F4F6"/>
+  <text x="500" y="505" text-anchor="middle" font-size="16" font-weight="bold">UX/UI Frame Diagram Types</text>
+  
+  <!-- Wireframe -->
+  <rect x="80" y="540" width="120" height="80" fill="#F9FAFB" stroke="#9CA3AF" stroke-width="2" rx="3"/>
+  <text x="140" y="560" text-anchor="middle" font-size="10" font-weight="bold">Low-Fi Wireframe</text>
+  <rect x="90" y="570" width="100" height="8" fill="#D1D5DB"/>
+  <rect x="90" y="585" width="60" height="8" fill="#D1D5DB"/>
+  <rect x="90" y="600" width="80" height="8" fill="#D1D5DB"/>
+  <text x="140" y="635" text-anchor="middle" font-size="8">Structure & Layout</text>
+  
+  <!-- User Flow -->
+  <g transform="translate(230, 540)">
+    <rect width="120" height="80" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2" rx="3"/>
+    <text x="60" y="20" text-anchor="middle" font-size="10" font-weight="bold">User Flow Diagram</text>
+    <circle cx="30" cy="35" r="8" fill="#3B82F6"/>
+    <circle cx="60" cy="50" r="8" fill="#3B82F6"/>
+    <circle cx="90" cy="35" r="8" fill="#3B82F6"/>
+    <line x1="38" y1="35" x2="52" y2="50" stroke="#3B82F6" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="68" y1="50" x2="82" y2="35" stroke="#3B82F6" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="60" y="75" text-anchor="middle" font-size="8">Navigation Paths</text>
+  </g>
+  
+  <!-- Task Flow -->
+  <g transform="translate(380, 540)">
+    <rect width="120" height="80" fill="#F0FDF4" stroke="#22C55E" stroke-width="2" rx="3"/>
+    <text x="60" y="20" text-anchor="middle" font-size="10" font-weight="bold">Task Flow Map</text>
+    <rect x="10" y="25" width="20" height="15" fill="#22C55E" rx="2"/>
+    <rect x="50" y="25" width="20" height="15" fill="#22C55E" rx="2"/>
+    <rect x="80" y="25" width="20" height="15" fill="#22C55E" rx="2"/>
+    <line x1="30" y1="32" x2="50" y2="32" stroke="#22C55E" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="70" y1="32" x2="80" y2="32" stroke="#22C55E" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="60" y="75" text-anchor="middle" font-size="8">Task Sequences</text>
+  </g>
+  
+  <!-- Information Architecture -->
+  <g transform="translate(530, 540)">
+    <rect width="120" height="80" fill="#FDF2F8" stroke="#EC4899" stroke-width="2" rx="3"/>
+    <text x="60" y="15" text-anchor="middle" font-size="10" font-weight="bold">Info Architecture</text>
+    <rect x="45" y="25" width="30" height="12" fill="#EC4899" rx="2"/>
+    <rect x="25" y="45" width="25" height="10" fill="#EC4899" rx="1"/>
+    <rect x="55" y="45" width="25" height="10" fill="#EC4899" rx="1"/>
+    <rect x="85" y="45" width="25" height="10" fill="#EC4899" rx="1"/>
+    <line x1="60" y1="37" x2="37" y2="45" stroke="#EC4899" stroke-width="1"/>
+    <line x1="60" y1="37" x2="67" y2="45" stroke="#EC4899" stroke-width="1"/>
+    <line x1="60" y1="37" x2="97" y2="45" stroke="#EC4899" stroke-width="1"/>
+    <text x="60" y="75" text-anchor="middle" font-size="8">Content Hierarchy</text>
+  </g>
+  
+  <!-- Concept Model -->
+  <g transform="translate(680, 540)">
+    <rect width="120" height="80" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2" rx="3"/>
+    <text x="60" y="15" text-anchor="middle" font-size="10" font-weight="bold">Concept Model</text>
+    <ellipse cx="60" cy="40" rx="35" ry="15" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="60" y="45" text-anchor="middle" font-size="8">Mental Model</text>
+    <circle cx="30" cy="60" r="6" fill="#F59E0B"/>
+    <circle cx="90" cy="60" r="6" fill="#F59E0B"/>
+    <text x="60" y="75" text-anchor="middle" font-size="8">User Understanding</text>
+  </g>
+  
+  <!-- Interactive Prototype -->
+  <g transform="translate(830, 540)">
+    <rect width="120" height="80" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" rx="3"/>
+    <text x="60" y="15" text-anchor="middle" font-size="10" font-weight="bold">Hi-Fi Prototype</text>
+    <rect x="20" y="25" width="80" height="35" fill="#8B5CF6" opacity="0.3" rx="3"/>
+    <rect x="25" y="30" width="15" height="8" fill="#8B5CF6"/>
+    <rect x="45" y="30" width="30" height="4" fill="#8B5CF6"/>
+    <rect x="45" y="38" width="20" height="4" fill="#8B5CF6"/>
+    <rect x="25" y="48" width="50" height="8" fill="#8B5CF6"/>
+    <text x="60" y="75" text-anchor="middle" font-size="8">Interactive Design</text>
+  </g>
+  
+  <!-- Legend -->
+  <rect x="50" y="640" width="900" height="80" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="1" rx="5"/>
+  <text x="500" y="660" text-anchor="middle" font-size="14" font-weight="bold">Context Engineering Workflow</text>
+  <text x="150" y="680" text-anchor="middle" font-size="12" fill="#059669" font-weight="bold">Human Focus: Strategy & Design</text>
+  <text x="500" y="680" text-anchor="middle" font-size="12" fill="#7C3AED" font-weight="bold">Collaboration: Review & Iteration</text>
+  <text x="850" y="680" text-anchor="middle" font-size="12" fill="#DC2626" font-weight="bold">AI Focus: Implementation</text>
+  
+  <text x="500" y="700" text-anchor="middle" font-size="10" fill="#6B7280">
+    Context Engineers define UX/UI concepts while AI generates implementation code
+  </text>
+</svg>
